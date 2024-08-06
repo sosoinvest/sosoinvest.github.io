@@ -21,7 +21,7 @@ author_profile: false
 주식은 언제 왜 어떻게 만들어졌고 초기에는 어떻게 거래됐을까요? 이러한 역사에 대해 궁금하신 분들은 네덜란드인 로데베이크 페트람의 책  [[세계 최초의 증권거래소](https://product.kyobobook.co.kr/detail/S000001616746)]를 추천드립니다. 
 
 <p align="center">   
-    <img src="/images/2024-08-04-stock-history/book.jpg" alt="세계 최초의 증권거래소 책 사진">
+    <img src="/images/2024-08-04-stock-history/book.webp" alt="세계 최초의 증권거래소 책 사진">
     <br>
    <span style="font-style: italic; color: #FFFFFF;">Fig. 1 세계 최초의 증권거래소 책</span>
 </p>
@@ -49,9 +49,9 @@ author_profile: false
 이 방법은 투자자들에게 회사 수익의 일부를 배당금으로 받을 권리를 주었고, 동시에 주식을 다른 사람에게 팔 수 있는 권리도 부여했습니다. 이로 인해 세계 최초의 거래소가 네덜란드 암스테르담에 설립된 것입니다.
 
 <p align="center">   
-    <img src="/images/2024-08-04-stock-history/history_of_stock.jpg" alt="동인도회사의 역사 연도표">
+    <img src="/images/2024-08-04-stock-history/history_of_stock.webp" alt="동인도회사의 역사 연도표">
     <br>
-   <span style="font-style: italic; color: #FFFFFF;">Fig. 2 동인도회사의 역사 연도표</span>
+   <span style="font-style: italic; color: #FFFFFF;">Fig. 2 동인도회사의 역사 연도표 (출처: 세계 최초의 증권거래소)</span>
 </p>
 
 ### 2.1 암스테르담 거래소의 주식 거래의 특징
