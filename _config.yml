@@ -21,7 +21,7 @@ title                    : "SOSO Invest"
 title_separator          : "|"
 subtitle                 : 소소한 투자 이야기 # site tagline that appears below site title in masthead
 name                     : "SOSO"
-description              : "소소의 투자 블로그입니다"
+description              : "소소하게 투자에 대해 얘기하는 블로그입니다."
 url                      : "https://sosoinvest.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
