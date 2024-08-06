@@ -5,6 +5,9 @@ categories: 투자
 tag: [주식]
 toc: true
 author_profile: false
+image: "/images/2024-08-04-stock-history/book.webp" # Open Graph image
+header:
+  teaser: "/images/2024-08-04-stock-history/book.webp"
 # sidebar:
 #     nav: "docs"
 # search: true
