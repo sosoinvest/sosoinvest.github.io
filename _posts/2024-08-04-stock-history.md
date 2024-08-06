@@ -7,8 +7,8 @@ toc: true
 author_profile: false
 # image: /images/2024-08-04-stock-history/book.webp # Open Graph image
 header:
-  teaser: /assets/images/logo.webp
-  og_image: /assets/images/logo.webp
+  teaser: /assets/images/test.jpg
+  og_image: /assets/images/test.jpg
 # sidebar:
 #     nav: "docs"
 # search: true
