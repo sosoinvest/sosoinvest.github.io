@@ -5,10 +5,10 @@ categories: 투자
 tag: [주식]
 toc: true
 author_profile: false
-# image: /images/2024-08-04-stock-history/book.webp # Open Graph image
-header:
-  teaser: /assets/images/test.png
-  og_image: /assets/images/test.png
+#header:
+#  teaser: /assets/images/test.png
+#  og_image: /assets/images/test.png
+
 # sidebar:
 #     nav: "docs"
 # search: true
@@ -34,7 +34,7 @@ header:
 
 책에서 처음 알게된 내용과 궁금해서 추가로 찾아본 내용을 아래에서 정리했습니다. 많은 부분이 책의 옮긴이 조진서 기자님의 '책을 소개하며'글을 참조했습니다.
 
-## 1 주식은 뭘까?
+## 1 주식이란?
 
 주식은 분산출자를 바탕으로 성립한 회사의 자본(자산과 부채)을 구성하는 단위이며 그것을 나타내는 유가증권을 뜻합니다. 예를들면, 개인이 삼성전자와 같은 특정 회사에 일정 금액을 투자하고, 그에 대한 대가로 일정 기간마다 투자금에 비례한 이득, 즉, 배당을 받거나 경영권을 행사할 수 있게 하는 제도입니다. 즉, 삼성전자에 1000만원을 투자했다면 1000만원에 해당하는 배당금을 받고 경영권을 행사할 수 있게 됩니다. 다시말해 1000만원의 비율만큼 삼성전자를 소유하게 됩니다.
 
