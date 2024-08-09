@@ -6,10 +6,6 @@ categories: 투자
 tag: [주식]
 toc: true
 author_profile: false
-#header:
-#  teaser: /assets/images/test.png
-#  og_image: /assets/images/test.png
-
 # sidebar:
 #     nav: "docs"
 # search: true
