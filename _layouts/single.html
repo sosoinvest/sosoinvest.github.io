@@ -18,6 +18,14 @@ layout: default
   {% endunless %}
 {% endif %}
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <!-- 기타 meta 태그와 링크들 -->
+  {{ content_for_header }}
+</head>
+
 <div id="main" role="main">
   {% include sidebar.html %}
 
@@ -31,7 +39,7 @@ layout: default
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
           {% if page.title -%}
-          <h1 id="page-title" class="page__title" itemprop="headline">
+          <h1 id="page-title" class="page__title" itemprop="  line">
             <a href="{{ page.url | absolute_url }}" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
           </h1>
           {%- endif %}

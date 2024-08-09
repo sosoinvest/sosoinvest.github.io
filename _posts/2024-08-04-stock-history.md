@@ -1,6 +1,7 @@
 ---
 layout: single
 title:  "주식은 언제 어떻게 생겨났을까: 최초의 증권거래소"
+description: 주식이라는 것은 언제 누가 어떻게 만들었을까요? 주식의 역사에 대해 소개합니다.
 categories: 투자
 tag: [주식]
 toc: true
