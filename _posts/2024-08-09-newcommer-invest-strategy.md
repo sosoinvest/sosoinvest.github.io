@@ -6,9 +6,9 @@ categories: 투자
 tag: [주식,부동산,연금]
 toc: true
 author_profile: false
-#header:
-#  teaser: /assets/images/test.png
-#  og_image: /assets/images/test.png
+header:
+ teaser: /assets/images/teaser.png
+ og_image: /assets/images/teaser.png
 
 # sidebar:
 #     nav: "docs"
