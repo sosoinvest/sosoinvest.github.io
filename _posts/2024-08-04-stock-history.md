@@ -7,8 +7,8 @@ tag: [주식]
 toc: true
 author_profile: false
 header:
-  teaser: /assets/images/teaser.png
-  og_image: /assets/images/teaser.png
+  teaser: /assets/images/logo.png
+  og_image: /assets/images/logo.png
 # sidebar:
 #     nav: "docs"
 # search: true

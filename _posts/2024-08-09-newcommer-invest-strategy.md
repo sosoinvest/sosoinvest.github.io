@@ -7,8 +7,8 @@ tag: [주식,부동산,연금]
 toc: true
 author_profile: false
 header:
- teaser: /assets/images/teaser.png
- og_image: /assets/images/teaser.png
+ teaser: /assets/images/logo.png
+ og_image: /assets/images/logo.png
 
 # sidebar:
 #     nav: "docs"
@@ -55,7 +55,7 @@ header:
 - 청약 조건: 국민주택은 청약저축 또는 주택청약종합저축으로 신청하며, 민영주택은 청약부금, 청약예금 또는 주택청약종합저축으로 신청합니다. 지금은 청약부금, 청약예금, 청약저축이 주택청약 종합저축으로 통합되어 은행에서 청약통장을 만드신다면 한가지 선택지밖에 없습니다.
 - 당첨자 선정방식: 국민주택은 청약통장 납입횟수와 총액에 따라 선정되며, 민영주택은 청약 가점제로 선정됩니다.
 
-한국주택공사의 홈페이지에서는 [상세한 청약 조건 및 당첨자 선정방식을](https://apply.lh.or.kr/lhapply/cm/cntnts/cntntsView.do?mi=201544&cntntsId=1192)를 참고하실 수 있습니다.
+한국주택공사의 홈페이지에서는 [상세한 청약 조건 및 당첨자 선정방식을](https://apply.lh.or.kr/lhapply/cm/cntnts/cntntsView.do?mi=201544&cntntsId=1192) 참고하실 수 있습니다.
 
 ### 적절한 청약통장 납입금액
 국민주택에 당첨되려면 청약 납입 인정금액이 중요합니다. 따라서 월 납인인정한도에 맞춰 꾸준히 붓는 것이 중요합니다. 최근 [대한민국 정책브리핑에 따르면](https://m.korea.kr/news/reporterView.do?newsId=148931223&pWise=mMain&pWiseMain=H2#reporter) 청약통장의 월 납입 인정금액이 기존 10만원에서 최근 25만원으로 1983년 이후 처음으로 상향되었습니다. 
