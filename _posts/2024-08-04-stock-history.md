@@ -7,8 +7,8 @@ tag: [주식]
 toc: true
 author_profile: false
 header:
-  teaser: /assets/images/logo.png
-  og_image: /assets/images/logo.png
+  teaser: /images/2024-08-04-stock-history/book.webp
+  og_image: /images/2024-08-04-stock-history/book.webp
 # sidebar:
 #     nav: "docs"
 # search: true

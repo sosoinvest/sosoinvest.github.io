@@ -7,8 +7,8 @@ tag: [주식,부동산,연금]
 toc: true
 author_profile: false
 header:
- teaser: /assets/images/logo.png
- og_image: /assets/images/logo.png
+ teaser: /images/2024-08-09-newcommer-invest-strategy/연금저축.webp
+ og_image: /images/2024-08-09-newcommer-invest-strategy/연금저축.webp
 
 # sidebar:
 #     nav: "docs"
