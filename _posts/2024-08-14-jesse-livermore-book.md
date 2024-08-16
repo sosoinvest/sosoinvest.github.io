@@ -3,7 +3,7 @@ layout: single
 title:  "제시 리버모어의 회상(Reminiscences of a Stock Operator)"
 description: 1920년대 최고의 주식 투기꾼 제시 리버모어가 자신의 생각을 정리한 책을 읽고 얻은 생각과 교훈을 정리했습니다.
 categories: 투자
-tag: [주식]
+tag: [주식,책]
 toc: true
 author_profile: false
 header:
