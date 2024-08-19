@@ -7,8 +7,8 @@ tag: [주식,파이썬]
 toc: true
 author_profile: false
 header:
- teaser: /images/2024-08-16-stock-return-normal-distribution/kospi200-histogram.webp
- og_image: /images/2024-08-16-stock-return-normal-distribution/kospi200-histogram.webp
+ teaser: /images/2024-08-19-stock-price-model/kodex200-pdf.webp
+ og_image: /images/2024-08-19-stock-price-model/kodex200-pdf.webp
 
 # sidebar:
 #     nav: "docs"
