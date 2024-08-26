@@ -186,12 +186,6 @@ for thisfrac, thispatch in zip(fracs, patches):
     thispatch.set_facecolor(color)
 
 plt.savefig("KOSPI200_HISTOGRAM.png")
-
-for thisfrac, thispatch in zip(fracs, patches):
-    color = plt.cm.plasma(norm(thisfrac))
-    thispatch.set_facecolor(color)
-
-plt.savefig("KOSPI200_HISTOGRAM2.png")
 plt.show()
 
 ```
