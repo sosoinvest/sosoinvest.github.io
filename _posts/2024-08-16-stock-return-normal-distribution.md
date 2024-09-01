@@ -3,7 +3,7 @@ layout: single
 title:  "주가의 변동은 정규분포를 따른다: 한국, 미국, 일본, 중국의 주가 지수 비교"
 description: 주가 일간 변동율의 히스토그램을 분석하여 정규분포를 따르는지 확인합니다.
 categories: 투자
-tag: [주식,파이썬]
+tag: [주식,파이썬,퀀트]
 toc: true
 author_profile: false
 header:

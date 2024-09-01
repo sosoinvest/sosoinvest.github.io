@@ -3,7 +3,7 @@ layout: single
 title:  "주식이 오를 확률 계산하기: 로그 정규분포 모델을 이용하여"
 description: 로그 정규분포 모델을 이용하여 주식이 오를 확률을 계산합니다.
 categories: 투자
-tag: [주식,파이썬]
+tag: [주식,파이썬,퀀트]
 toc: true
 author_profile: false
 header:
