@@ -68,7 +68,7 @@ $$
 여기서, $\rho_{AB}$ 는 두 자산간의 상관계수로, 다음과 같이 공분산($Cov(A,B)$)을 표준편차의 곱으로 나눈 것으로 정의된다.
 
 $$
-\rho_{AB} = \frac{Cov(A,B)}{\sigma_X \sigma_Y}
+\rho_{AB} = \frac{Cov(A,B)}{\sigma_A \sigma_B}
 $$
 
 $$
