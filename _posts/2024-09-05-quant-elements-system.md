@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "퀀트의 필수 요소 (5/7): 시스템 구현"
-description: 퀀트 투자에 필요한 요소인 트레디이 시스템 구현에 대하여 정리하였다.
+description: 퀀트 투자에 필요한 요소인 트레이딩 시스템 구현에 대하여 정리하였다.
 categories: 투자
 tag: [주식,책,퀀트]
 toc: true
