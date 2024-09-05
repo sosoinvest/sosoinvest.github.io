@@ -7,8 +7,8 @@ tag: [주식,책,퀀트]
 toc: true
 author_profile: false
 header:
- teaser: /images/2024-09-02-quant-elements-factor/quant-elements-factor-thumbnail.webp
- og_image: /images/2024-09-02-quant-elements-factor/quant-elements-factor-thumbnail.webp
+ teaser: /images/2024-09-04-quant-elements-factor/quant-elements-factor-thumbnail.webp
+ og_image: /images/2024-09-04-quant-elements-factor/quant-elements-factor-thumbnail.webp
 
 # sidebar:
 #     nav: "docs"
