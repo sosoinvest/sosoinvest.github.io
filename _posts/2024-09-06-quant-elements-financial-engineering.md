@@ -7,8 +7,8 @@ tag: [주식,책,퀀트]
 toc: true
 author_profile: false
 header:
- teaser: /images/2024-09-05-quant-elements-financial-engineering/quant-elements-financial-engineering-thumbnail.webp
- og_image: /images/2024-09-05-quant-elements-financial-engineering/quant-elements-financial-engineering-thumbnail.webp
+ teaser: /images/2024-09-06-quant-elements-financial-engineering/quant-elements-financial-engineering-thumbnail.webp
+ og_image: /images/2024-09-06-quant-elements-financial-engineering/quant-elements-financial-engineering-thumbnail.webp
 
 # sidebar:
 #     nav: "docs"
