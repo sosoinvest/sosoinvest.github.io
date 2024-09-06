@@ -133,7 +133,7 @@ header:
 
 6. [금융공학](/투자/quant-elements-financial-engineering): 옵션과 선물에 대하여 알면 퀀트 투자 대상과 전략을 넓힐 수 있다.
 
-7. [머신러닝](/투자/quant-elements-machine-learning): 퀀트의 기반이 되는 데이터 분석에 머신러닝을 사용할 수 있다.
+7. [머신러닝](/투자/quant-elements-machine-learning): 머신러닝 기법을 퀀트에 적용할 수 있다.
 
 <br>
 # 느낀점

@@ -14,7 +14,7 @@ header:
 #     nav: "docs"
 # search: true
 ---
-퀀트의 기반이 되는 데이터 분석에 머신러닝을 사용할 수 있다.
+머신러닝 기법을 퀀트에 적용할 수 있다.
 
 {: .notice--primary}
 <span style="font-size: 1.25em;">이 글은 [퀀트의 정석] 책에 나오는 머신러닝 부분을 정리한 것이다.</span>
