@@ -24,7 +24,7 @@ S&P 500의 S&P는 Standard and Poor's의 약자로 지수를 산출하는 회사
 <p align="center">   
     <img src="/images/2024-09-15-snp-historical-return-since-1871/henry_varnum_poor.webp" alt="S&P의 창업자 Henry Varnum Poor의 사진">
     <br>
-   <span style="font-style: italic; color: #FFFFFF;">Fig. 1 Henry Varnum Poor (1812-1905)</span>
+   <span style="font-style: italic; color: #FFFFFF;">Fig. 1 Henry Varnum Poor (1812-1905); 출처: wikipedia.com</span>
 </p>
 
 S&P는 150년의 역사를 가진 세계적인 금융 정보 및 분석회사로 신용평가, 금융 지수 제공, 시장 분석 및 리서치 등의 투자 정보를 제공하는 사업을 영위하고 있다. 회사의 역사를 찾아보면 1860년 [Henry Varnum Poor](https://en.wikipedia.org/wiki/Henry_Varnum_Poor)가 "History of Railroads and Canals in the United States" 책을 출판하며 시작됐다고 한다. 당시에는 철도와 운하가 주요 운송수단이었기 때문에 이에 대한 정보를 다루는 책의 수요가 많았을 것으로 추정해본다. 1868년에는 Henry Varnum Poor가 아들 Henry William Poor와 함께 H.V and H.W Poor Co.를 설립했다. 1941년에는 Luther Lee Blake가 1906년 설립한 Standard Statistics와 합병하여 Standard & Poor's Corporation이 되었다. S&P의 S는 Standard Statistics에서 따온 것 처럼 보인다.
@@ -80,7 +80,7 @@ S&P 500 외에 미국 시장을 기반으로 산출되는 주가지수는 다우
 <p align="center">   
     <img src="/images/2024-09-15-snp-historical-return-since-1871/SNP500_return_1871-2024.webp" alt="S&P500 지수의 수익률 그림">
     <br>
-   <span style="font-style: italic; color: #FFFFFF;">Fig. 1 S&P 500 지수의 수익률 1871-2024</span>
+   <span style="font-style: italic; color: #FFFFFF;">Fig. 2 S&P 500 지수의 수익률 1871-2024</span>
 </p>
 
 ## 집중 투자 결과: 1871년에 100달러를 투자했으면
@@ -89,7 +89,7 @@ S&P 500 외에 미국 시장을 기반으로 산출되는 주가지수는 다우
 <p align="center">   
     <img src="/images/2024-09-15-snp-historical-return-since-1871/100_dollar_growth.webp" alt="S&P 500에 100달러 투자하면 늘어나는 자산 규모를 보여주는 그림">
     <br>
-   <span style="font-style: italic; color: #FFFFFF;">Fig. 2 S&P 500 지수에 100달러 투자 결과; 그림의 y축은 로그 스케일로 표시했다</span>
+   <span style="font-style: italic; color: #FFFFFF;">Fig. 3 S&P 500 지수에 100달러 투자 결과; 그림의 y축은 로그 스케일로 표시했다</span>
 </p>
 
 이 결과는 월간 0.74%의 수익률이 장기간 누적된 것으로 복리의 마법의 위대함을 보여준다. 그러나 여기에는 한가지 함정이 있다. 아무리 의술이 발달한다 하더라도, 뇌가 컴퓨터에 들어가지 않는 이상 153년까지 살 수 있는 사람은 없기 때문이다. 이러한 장기적인 관점에만 매몰된 생각을 영국의 경제학자 존 메이너드 케인스(John Maynard Keynes)는 이렇게 비판했다. 
@@ -108,7 +108,7 @@ S&P 500 외에 미국 시장을 기반으로 산출되는 주가지수는 다우
 <p align="center">   
     <img src="/images/2024-09-15-snp-historical-return-since-1871/100_dollar_monthly_investing.webp" alt="S&P 500에 매달 100달러를 투자하면 늘어나는 자산 규모를 보여주는 그림">
     <br>
-   <span style="font-style: italic; color: #FFFFFF;">Fig. 3 S&P 500 지수에 분할매수 결과; 그림의 y축은 로그 스케일로 표시했다</span>
+   <span style="font-style: italic; color: #FFFFFF;">Fig. 4 S&P 500 지수 분할매수 결과; 그림의 y축은 로그 스케일로 표시했다</span>
 </p>
 
 153년 동안 투자한 총 액수는 184,200달러인데, 이는 15,241,947,507(152억)달러로 늘어난다. 투입한 금액대비 수익률은 82746배이다. 연간 수익률은 7.68%로 집중 투자한 경우의 수익률 9.25%보다 약 1.5% 낮다. 그러나 단기적인 변동성의 영향을 줄일 수 있다는 것에서 멘탈을 관리하는데 유리한 점이 있다.
@@ -125,19 +125,20 @@ S&P 500 외에 미국 시장을 기반으로 산출되는 주가지수는 다우
 한편 쉴러 교수는 예일대학교의 경제학 교수로, 1972년 MIT에서 박사학위를 받았다. 2013년에는 유진 파마, 라스 피터 핸슨과 함께 노벨 경제학상을 받았다. 특이한 것은 로버트 쉴러는 효율적 시장가설을 주장하는 유진 파마 교수와 반대되는 [행동경제학](/투자/quant-elements-psychology)을 연구한다는 것이다. 
 
 ## 부록
-### 월간 분할매수 조건의 수익률 계산
+### 월간 분할매수 조건의 수익률 계산 코드
 여기서 df는 Time-Return으로 구성된 pandas 데이터 프레임이다.
 
 ```python
 from matplotlib import pyplot as plt
 from matplotlib.ticker import MaxNLocator
+import pandas as pd
 plt.rcParams["font.family"] ="Malgun Gothic"
 plt.rcParams["axes.unicode_minus"] = False
 
 #BLOCK: Monthly investing 100 dollar for 25 years and let it grow for the rest of the time
 money = [100]
 for _ in range(0, len(df["Return"])):
-    if _ <12*25:
+    if _ <12*20:
         money.append((money[_]+100)*(df["Return"][_]/100+1))
     else:
         money.append((money[_] + 0) * (df["Return"][_] / 100 + 1))
@@ -158,7 +159,6 @@ plt.yticks(fontname="Times New Roman", fontsize=12)
 
 plt.yscale("log")
 ax.xaxis.set_major_locator(MaxNLocator(integer=True))
-plt.text(1500, 200, "출처: sosoinvest.github.io", fontsize=18, color='gray', ha='center')
 plt.title(f"Investing 100$ monthly from 1871 to 2024", fontsize=16, color="black")
 plt.tight_layout()
 
