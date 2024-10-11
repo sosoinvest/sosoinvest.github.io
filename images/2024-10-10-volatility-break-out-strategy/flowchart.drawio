@@ -1,0 +1,60 @@
+<mxfile host="Electron" modified="2024-10-10T08:31:32.151Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="CySsUM-FyJvH67vgI0Sz" version="24.1.0" type="device">
+  <diagram name="Page-1" id="Aad-32aSPpmH8zQ4I8I0">
+    <mxGraphModel dx="794" dy="519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;" edge="1" parent="1" source="V57BrqEC9a7_YL1_NiBB-2" target="V57BrqEC9a7_YL1_NiBB-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-2" value="Day + 1" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Times New Roman;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="V57BrqEC9a7_YL1_NiBB-4" target="V57BrqEC9a7_YL1_NiBB-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-4" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;Sell at the open price&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;(buy_sign = 0)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Times New Roman;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="V57BrqEC9a7_YL1_NiBB-5" target="V57BrqEC9a7_YL1_NiBB-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-5" value="&lt;b&gt;PriceWidth =&amp;nbsp;&lt;/b&gt;&lt;div&gt;(High-Low)&lt;sub style=&quot;&quot;&gt;yesterday&lt;/sub&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Times New Roman;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-12" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;" edge="1" parent="1" source="V57BrqEC9a7_YL1_NiBB-6" target="V57BrqEC9a7_YL1_NiBB-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-21" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;horizontal=1;fontFamily=Times New Roman;" edge="1" parent="1" source="V57BrqEC9a7_YL1_NiBB-6" target="V57BrqEC9a7_YL1_NiBB-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="210" />
+              <mxPoint x="170" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-6" value="&lt;b&gt;If buy_sign = 1&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Times New Roman;shadow=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="V57BrqEC9a7_YL1_NiBB-10" target="V57BrqEC9a7_YL1_NiBB-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-10" value="If Price &amp;gt; TargetPrice&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;(=Open+K*PriceWidth)&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Times New Roman;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="215" y="420" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="V57BrqEC9a7_YL1_NiBB-11" target="V57BrqEC9a7_YL1_NiBB-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="80" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="420" y="551" />
+              <mxPoint x="420" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V57BrqEC9a7_YL1_NiBB-11" value="&lt;div&gt;&lt;font color=&quot;#0000ff&quot;&gt;Buy at the target price&lt;/font&gt;&lt;/div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;(buy_sign = 1)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Times New Roman;fontStyle=1;shadow=1;glass=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="523" width="120" height="55" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

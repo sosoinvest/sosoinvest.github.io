@@ -3,7 +3,7 @@ layout: single
 title:  "S&P 500 지수의 역사적 수익률: 1871년부터 현재까지 얼마나 올랐을까?"
 description: 1817년 부터 현재까지 S&P 500 지수의 역사적 수익률 정리
 categories: 투자
-tag: [주식]
+tag: [주식,퀀트,백테스트]
 toc: true
 author_profile: false
 header:
