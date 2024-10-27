@@ -28,7 +28,7 @@ header:
 <p align="center">   
     <img src="/images/2024-10-25-quant-in-wallstreet/quant-in-margincall.webp" alt="영화 마진콜에 나오는 퀀트 ">
     <br>
-   <span style="font-style: italic; color: #FFFFFF;">Fig. 1 윌 에머슨(좌)와 에릭 데일(우); 다리를 짓는 일과 월스트리트의 일이 만드는 사회적인 가치의 차이를 설명한다. </span>
+   <span style="font-style: italic; color: #FFFFFF;">Fig. 1 윌 에머슨(좌)와 에릭 데일(우); 다리를 짓는 일과 월스트리트의 일이 만드는 사회적인 가치의 차이를 설명한다.(출처: Youtube) </span>
 </p>
 
 # 빅쇼트(The Big Short)
@@ -41,5 +41,5 @@ header:
 <p align="center">   
     <img src="/images/2024-10-25-quant-in-wallstreet/quant-in-bigshort.webp" alt="빅쇼트에 나오는 퀀트 ">
     <br>
-   <span style="font-style: italic; color: #FFFFFF;">Fig. 2 중국인 퀀트를 소개하는 모습; 영어도 할줄 모르고 중국 수학 경시대회에서 1등을 했다고 소개하지만, 사실은 영어도 잘하고 수학 경시대회에서는 2등을 했다. </span>
+   <span style="font-style: italic; color: #FFFFFF;">Fig. 2 중국인 퀀트를 소개하는 모습; 영어도 할줄 모르고 중국 수학 경시대회에서 1등을 했다고 소개하지만, 사실은 영어도 잘하고 수학 경시대회에서는 2등을 했다.(출처: Youtube) </span>
 </p>
