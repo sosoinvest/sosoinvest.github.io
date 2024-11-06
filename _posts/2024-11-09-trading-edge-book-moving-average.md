@@ -7,8 +7,8 @@ tag: [주식,퀀트,책]
 toc: true
 author_profile: false
 header:
- teaser: /images/2024-11-08-trading-edge-book-trading-ready/trading-pattern.webp
- og_image: /images/2024-11-08-trading-edge-book-trading-ready/trading-pattern.webp
+ teaser: /images/2024-11-09-trading-edge-book-moving-average/11-14.webp
+ og_image: /images/2024-11-09-trading-edge-book-moving-averagey/11-14.webp
 
 # sidebar:
 #     nav: "docs"
