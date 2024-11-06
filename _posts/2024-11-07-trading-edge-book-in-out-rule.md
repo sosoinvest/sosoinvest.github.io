@@ -96,7 +96,7 @@ header:
 
 <div class="notice--primary">
 <ul>
-    <li style="font-size: 1.25em;"><돈키언 시스템></li>
+    <span style="font-size: 1.25em;">[돈키언 시스템]</span>
     <li style="font-size: 1.25em;">(1) 과거 20일 고가(저가)를 경신하면 매수(매도) 진입한다.</li>
     <li style="font-size: 1.25em;">(2) 50일 이동평균선이 300일 이동평균선을 위(아래)에 있을 때는 매수(매도)만 한다.</li>
 </ul>
@@ -171,7 +171,7 @@ header:
 
 <div class="notice--primary">
 <ul>
-    <li style="font-size: 1.25em;"><손절매 라인을 크게 넘어 청산되는 경우></li>
+    <li style="font-size: 1.25em;">손절매 라인을 크게 넘어 청산되는 경우</li>
     <li style="font-size: 1.25em;">오버나이트(포지션을 보유한 채로 밤을 넘기는 것) 했을 때</li>
     <li style="font-size: 1.25em;">오버위크(포지션을 보유한 채로 주말을 넘기는 것) 했을 때</li>
     <li style="font-size: 1.25em;">오버홀리데이(포지션을 보유한 채로 휴일을 지내는 것) 했을 때</li>
@@ -220,7 +220,7 @@ header:
 
 <div class="notice--primary">
 <ul>
-    <li style="font-size: 1.25em;"><청산규칙 1></li>
+    <span style="font-size: 1.25em;">[청산규칙 1]</span>
     <li style="font-size: 1.25em;">20일간 고가에서 매수진입 → 10일간 저가에서 청산</li>
     <li style="font-size: 1.25em;">20일간 저가에서 매도진입 → 10일간 고가에서 청산</li>
 </ul>
@@ -228,7 +228,7 @@ header:
 
 <div class="notice--primary">
 <ul>
-    <li style="font-size: 1.25em;"><청산규칙 2></li>
+    <span style="font-size: 1.25em;">[청산규칙 2]</span>
     <li style="font-size: 1.25em;">55일간 고가에서 매수진입 → 20일간 저가에서 청산</li>
     <li style="font-size: 1.25em;">55일간 저가에서 매도진입 → 20일간 고가에서 청산</li>
 </ul>
@@ -251,7 +251,7 @@ header:
 
 <div class="notice--primary">
 <ul>
-    <li style="font-size: 1.25em;"><터틀 그룹의 피라미딩 규칙></li>
+    <span style="font-size: 1.25em;">[터틀 그룹의 피라미딩 규칙]</span>
     <li style="font-size: 1.25em;">터틀 그룹의 피라미딩 규칙은 1/2N마다 추가하는 기법과 1N마다 추기하는 기법 두 가지가 있다.</li>
     <li style="font-size: 1.25em;">어떤 경우에도 피라미딩 규칙보다 종목 분산 규칙이 우선한다.</li>
     <li style="font-size: 1.25em;">포지션을 추가할 때마다 매수가의 2N 지점에 손절매 라인을 설정한다.</li>

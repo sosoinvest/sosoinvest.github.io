@@ -24,7 +24,7 @@ header:
 
 <div class="notice--primary">
 <ul>
-    <li style="font-size: 1.25em;"><골든크로스와 데드크로스></li>
+    <span style="font-size: 1.25em;">[골든크로스와 데드크로스]</span>
     <li style="font-size: 1.25em;">골든크로스: 가격이 이동평균선을 아래에서 위로 돌파하는 것(매수신호)</li>
     <li style="font-size: 1.25em;">데드크로스: 가격이 이동평균선을 위에서 아래로 돌파하는 것(매도신호)</li>
 </ul>
@@ -141,7 +141,7 @@ header:
 
 <div class="notice--primary">
 <ul>
-    <li style="font-size: 1.25em;"><이동평균선의 완벽한 배열></li>
+    <span style="font-size: 1.25em;">[이동평균선의 완벽한 배열]</span>
     <li style="font-size: 1.25em;">위에서부터 단기선/중기선/장기선의 순서로 배열되어 있으며, 3개의 선이 모두 우상향 중: 매수에 에지</li>
     <li style="font-size: 1.25em;">아래에서부터 단기선/중기선/장기선의 순서로 배열되어 있으며, 3개의 선 이 모두 우하향 중: 매도에 에지</li>
 </ul>
