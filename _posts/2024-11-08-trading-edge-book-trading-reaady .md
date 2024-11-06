@@ -76,7 +76,7 @@ $$
 
 <div class="notice--primary">
 <ul>
-    <li style="font-size: 1.25em;"><모델 1></li>
+    <li style="font-size: 1.25em;">[모델 1]</li>
     <li style="font-size: 1.25em;">승률 60%, 평균수익 25만원, 평균손실 30만원, 연간 트레이딩 횟수 200회</li>
     <li style="font-size: 1.25em;">TE = 3만원</li>
     <li style="font-size: 1.25em;">연간 수익 = 3만원x200회= 600만원</li>
@@ -85,7 +85,7 @@ $$
 
 <div class="notice--primary">
 <ul>
-    <li style="font-size: 1.25em;"><모델 2></li>
+    <li style="font-size: 1.25em;">[모델 2]</li>
     <li style="font-size: 1.25em;">승률 70%, 평균수익 30만원, 평균손실 30만원, 연간 트레이딩 횟수 50회</li>
     <li style="font-size: 1.25em;">TE = 12만원</li>
     <li style="font-size: 1.25em;">연간 수익 = 12만원x50회= 600만원</li>
@@ -94,7 +94,7 @@ $$
 
 <div class="notice--primary">
 <ul>
-    <li style="font-size: 1.25em;"><모델 3></li>
+    <li style="font-size: 1.25em;">[모델 3]</li>
     <li style="font-size: 1.25em;">승률 50%, 평균수익 40만원, 평균손실 25만원, 연간 트레이딩 횟수 80회</li>
     <li style="font-size: 1.25em;">TE = 7.5만원</li>
     <li style="font-size: 1.25em;">연간 수익 = 7.5만원x80회= 600만원</li>
@@ -103,7 +103,7 @@ $$
 
 <div class="notice--primary">
 <ul>
-    <li style="font-size: 1.25em;"><모델 4></li>
+    <li style="font-size: 1.25em;">[모델 4]</li>
     <li style="font-size: 1.25em;">승률 40%, 평균수익 60만원, 평균손실 30만원, 연간 트레이딩 횟수 100회</li>
     <li style="font-size: 1.25em;">TE = 6만원</li>
     <li style="font-size: 1.25em;">연간 수익 = 6만원x100회 = 600만원</li>
