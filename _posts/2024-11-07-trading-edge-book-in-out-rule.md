@@ -164,7 +164,6 @@ header:
 
 <div class="notice--primary">
 <ul>
-    <li style="font-size: 1.25em;">손절매 라인을 크게 넘어 청산되는 경우</li>
     <li style="font-size: 1.25em;">오버나이트(포지션을 보유한 채로 밤을 넘기는 것) 했을 때</li>
     <li style="font-size: 1.25em;">오버위크(포지션을 보유한 채로 주말을 넘기는 것) 했을 때</li>
     <li style="font-size: 1.25em;">오버홀리데이(포지션을 보유한 채로 휴일을 지내는 것) 했을 때</li>
