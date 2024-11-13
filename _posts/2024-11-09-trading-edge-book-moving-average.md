@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "실전 추세투자법(6/6): 이동평균선과 MACD기반 진입규칙 1"
-description: 실전 추세투자법 책의 이동평균선과 MACD기반 진입규칙 부분을 정리한 글
+title:  "실전 추세투자법(6/6): 이동평균선 기반 진입규칙"
+description: 실전 추세투자법 책의 이동평균선기반 진입규칙 부분을 정리한 글
 categories: 투자
 tag: [주식,퀀트,책]
 toc: true

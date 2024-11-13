@@ -7,8 +7,8 @@ tag: [주식,퀀트,책]
 toc: true
 author_profile: false
 header:
- teaser: /images/2024-11-11-problem-of-fundamental-analysis/trading-pattern.webp
- og_image: /images/2024-11-11-problem-of-fundamental-analysis/trading-pattern.webp
+ teaser: /images/2024-11-03-trading-edge-book/trading-edge-book.webp
+ og_image: /images/2024-11-03-trading-edge-book/trading-edge-book.webp
 
 # sidebar:
 #     nav: "docs"
@@ -88,4 +88,4 @@ header:
 ## 기술적 분석의 단점
 - 미래를 예측하는 도구가 아니다.
 - 분석 지표의 종류가 너무 많아서 어떤 것을 사용해야 좋을지 정하기 어렵다.
-- 올바른 기술적 분석 방법을 해설하는 책이나 사이트가 적어서 정확한 사용법을 모르거나 잘못된 사용법을 알고 있는 트레이더가 많다.
+- 올바른 기술적 분석 방법을 해설하는 책이나 사이트가 적어서 정확한 사용법을 모르거나 잘못된 사용법을 알고있는 트레이더가 많다.
