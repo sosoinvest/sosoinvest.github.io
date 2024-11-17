@@ -362,9 +362,3 @@ print(df_account)
 df_account.to_csv(file_name, index=True)
 
 ```
-
-
-
-
-
-

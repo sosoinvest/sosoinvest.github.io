@@ -1,0 +1,188 @@
+<mxfile host="Electron" modified="2024-11-17T21:29:53.289Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="5F2RKtfhlrKMcvCDd8ug" version="24.1.0" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1444" dy="944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-1" value="Account" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="790" y="810" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-60" value="+ data: [dictoinary]&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-1">
+          <mxGeometry y="26" width="160" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-1">
+          <mxGeometry y="50" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-4" value="+ monitor&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ deposit_cash&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ withdraw_cash&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ buy_asset&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ sell_asset&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ update&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-1">
+          <mxGeometry y="58" width="160" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-5" value="Trader" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="705" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-6" value="+ buy_sign: [int]&lt;div&gt;+ K: [float]&lt;/div&gt;&lt;div&gt;+ target_price: [float]&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-5">
+          <mxGeometry y="26" width="160" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-5">
+          <mxGeometry y="80" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-8" value="+ check_buy_sign&lt;div&gt;+ check_sell_sign&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-5">
+          <mxGeometry y="88" width="160" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-9" value="Logger" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="610" y="1160" width="160" height="162" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-10" value="+ data_dict: [dictionary]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-9">
+          <mxGeometry y="26" width="160" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-9">
+          <mxGeometry y="50" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-58" value="+ log_data&lt;div&gt;+ save_data&lt;/div&gt;&lt;div&gt;+ print_in_dataframe&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-9">
+          <mxGeometry y="58" width="160" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-12" value="+ log_data&lt;div&gt;+ save_data&lt;/div&gt;&lt;div&gt;+ print_in_dataframe&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-9">
+          <mxGeometry y="110" width="160" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-13" value="Analyzer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="50" y="1210" width="170" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-14" value="+ df: [dataframe]&lt;br&gt;&lt;div&gt;+ daily_return: [list]&lt;/div&gt;&lt;div&gt;+ daily_return_bnh: [list]&lt;/div&gt;&lt;div&gt;+ analysis_result: [dictionary]&lt;/div&gt;&lt;div&gt;+ filename: [str]&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-13">
+          <mxGeometry y="26" width="170" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-13">
+          <mxGeometry y="110" width="170" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-16" value="+ save_report&lt;div&gt;+ compute_daily_return&lt;/div&gt;&lt;div&gt;+ report&lt;/div&gt;&lt;div&gt;+ buy_and_hold_return&lt;/div&gt;&lt;div&gt;+ final_return&lt;/div&gt;&lt;div&gt;+ mdd&lt;/div&gt;&lt;div&gt;+ cagr&lt;/div&gt;&lt;div&gt;+ num_of_trades&lt;/div&gt;&lt;div&gt;+ num_of_days&lt;/div&gt;&lt;div&gt;+ num_wins&lt;/div&gt;&lt;div&gt;+ win_percent&lt;/div&gt;&lt;div&gt;+ sharp_ratio&lt;/div&gt;&lt;div&gt;+ mean_return&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Times New Roman;" vertex="1" parent="yqRtF2cNX9hZMMv9IqsH-13">
+          <mxGeometry y="118" width="170" height="202" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-17" target="yqRtF2cNX9hZMMv9IqsH-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-17" value="day + 1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=14;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="335" y="440" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-19" target="yqRtF2cNX9hZMMv9IqsH-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-19" target="yqRtF2cNX9hZMMv9IqsH-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="545" />
+              <mxPoint x="260" y="1150" />
+              <mxPoint x="355" y="1150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-19" value="Check if today is&amp;nbsp;&lt;div&gt;the&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;end of the data&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=14;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="321.25" y="505" width="147.5" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-21" target="yqRtF2cNX9hZMMv9IqsH-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-21" value="Get price data for yesterday and today" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=14;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="335" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-22" value="Terminate the testing" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Times New Roman;fontSize=14;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="355" y="1120" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-23" target="yqRtF2cNX9hZMMv9IqsH-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-23" value="Set the target price=0" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=14;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="335" y="676.25" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-24" target="yqRtF2cNX9hZMMv9IqsH-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-24" value="Set all the asset at the today&amp;nbsp;open price&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=14;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="560" y="740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-25" target="yqRtF2cNX9hZMMv9IqsH-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-50" value="buy_sign = 1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Times New Roman;" vertex="1" connectable="0" parent="yqRtF2cNX9hZMMv9IqsH-36">
+          <mxGeometry x="0.0396" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-25" target="yqRtF2cNX9hZMMv9IqsH-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-49" value="buy_sign = 0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Times New Roman;" vertex="1" connectable="0" parent="yqRtF2cNX9hZMMv9IqsH-38">
+          <mxGeometry x="-0.1641" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-25" value="Check the buy_sign" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=14;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="330" y="740" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-26" target="yqRtF2cNX9hZMMv9IqsH-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-26" value="Compute the target price = open + K*(High-Low)yesterday" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=14;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="297.5" y="840" width="195" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-27" target="yqRtF2cNX9hZMMv9IqsH-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-53" value="&lt;font face=&quot;Times New Roman&quot;&gt;Yes&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yqRtF2cNX9hZMMv9IqsH-40">
+          <mxGeometry x="-0.2291" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-27" target="yqRtF2cNX9hZMMv9IqsH-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-54" value="&lt;font face=&quot;Times New Roman&quot;&gt;No&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yqRtF2cNX9hZMMv9IqsH-41">
+          <mxGeometry x="-0.2077" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-27" value="Today high &amp;gt; target price&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=14;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="310" y="930" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-29" target="yqRtF2cNX9hZMMv9IqsH-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-29" value="Log the trading data" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=14;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="335" y="1040" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=14;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-30" target="yqRtF2cNX9hZMMv9IqsH-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=1 2;endArrow=none;endFill=0;curved=1;strokeColor=#0000FF;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-30" target="yqRtF2cNX9hZMMv9IqsH-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="860" />
+              <mxPoint x="790" y="860" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-30" value="Buy all the money at the target price" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=14;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="530" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=0;dashed=1;strokeColor=#00FF00;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-46" target="yqRtF2cNX9hZMMv9IqsH-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-46" value="Daily data&amp;nbsp; of the asset (Day, Open, High, Low, Close)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontFamily=Times New Roman;fontSize=14;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="530" y="583.75" width="120" height="92.5" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.015;entryY=0.718;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;dashed=1;dashPattern=1 2;strokeWidth=1;curved=1;strokeColor=#0000FF;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-25" target="yqRtF2cNX9hZMMv9IqsH-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.003;entryY=0.087;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;dashed=1;dashPattern=1 2;endArrow=none;endFill=0;strokeColor=#0000FF;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-24" target="yqRtF2cNX9hZMMv9IqsH-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=-0.008;entryY=0.106;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=1 2;endArrow=none;endFill=0;curved=1;strokeColor=#0000FF;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-29" target="yqRtF2cNX9hZMMv9IqsH-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-63" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.004;entryY=0.41;entryDx=0;entryDy=0;dashed=1;dashPattern=1 2;endArrow=none;endFill=0;strokeColor=#0000FF;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yqRtF2cNX9hZMMv9IqsH-62" target="yqRtF2cNX9hZMMv9IqsH-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yqRtF2cNX9hZMMv9IqsH-62" value="Evaluate the trading performance" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=14;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="335" y="1240" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
