@@ -21,7 +21,7 @@ header:
 <div style="overflow: hidden; width=100%; heigh:=600px;">
   <iframe 
     src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQNcjl5jcj9E3_0-IXvRozb1ccpUztO--57bNhawgm-RW1iXuH6AzoMIRDgApQMlkgW6ce2DvKvfjjx/pubhtml?gid=357174735&single=true"
-    width="55%" 
+    width="600" 
     height="450" 
     frameborder="0"
     style="overflow: hidden;">
