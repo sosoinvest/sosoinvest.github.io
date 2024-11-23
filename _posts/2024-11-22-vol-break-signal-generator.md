@@ -13,6 +13,9 @@ header:
 #     nav: "docs"
 # search: true
 ---
+아래의 표는 국장 섹터 ETF의 변동성 돌파 신호 알림 봇이다.
+
+장이 열리는 날에는 5분 간격으로 실시간 업데이트 되며, 변동성 신호가 나오면 그 ETF의 열은 노란색으로 강조된다.
 
 <iframe 
   src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQNcjl5jcj9E3_0-IXvRozb1ccpUztO--57bNhawgm-RW1iXuH6AzoMIRDgApQMlkgW6ce2DvKvfjjx/pubhtml?gid=0&single=true"
