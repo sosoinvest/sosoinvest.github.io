@@ -7,8 +7,8 @@ tag: [주식,퀀트]
 toc: true
 author_profile: false
 header:
- teaser: /images/2024-11-21-kelly-criterion/Kelly_with_0.65.webp
- og_image: /images/2024-11-21-kelly-criterion/Kelly_with_0.65.webp
+ teaser: /images/2024-11-22-vol-break-signal-generator/signal-bot.webp
+ og_image: /images/2024-11-22-vol-break-signal-generator/signal-bot.webp
 # sidebar:
 #     nav: "docs"
 # search: true
