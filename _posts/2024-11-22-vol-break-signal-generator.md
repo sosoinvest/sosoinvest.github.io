@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "변동성 돌파 신호 알림"
-description: 국장의 변동성 돌파 신호 알림 봇
+title:  "국장 섹터 ETF 변동성 돌파 신호 알림"
+description: 국장 섹터 ETF의 변동성 돌파 신호 알림 봇
 categories: 투자
 tag: [주식,퀀트]
 toc: true
@@ -23,3 +23,11 @@ header:
   height="600" 
   frameborder="0">
 </iframe>
+
+변동성 돌파 전략과 각 ETF의 트레이딩 성과는 아래의 관련 글에서 참고할 수 있다.
+
+- [래리 윌리엄스의 변동성 돌파전략 (파이썬 코드 있음)](/투자/volatility-break-out-strategy/)
+- [절대로 지지않는 롱 전략](/투자/never-losing-long-strategy)
+- [곱버스를 우상향시키는 방법](/투자/upward-sloping-inverse-double)
+- [국장에서 단타치기 가장 좋은 섹터](/투자/sector-etf-short-term-strategy)
+- [퀀트 백테스팅 파이썬 코드](/투자/backtesting-code)
