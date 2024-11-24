@@ -18,6 +18,8 @@ header:
 
 장이 열리는 날에는 5분 간격으로 업데이트 되며, 변동성 신호가 발생하면 그 ETF의 종목명은 초록색으로 강조된다.
 
+아래의 표에서 목표가는 K=0.5의 변동성 돌파 가격이다.
+
 <div style="overflow: hidden; width=100%; heigh:=600px;">
   <iframe 
     src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQNcjl5jcj9E3_0-IXvRozb1ccpUztO--57bNhawgm-RW1iXuH6AzoMIRDgApQMlkgW6ce2DvKvfjjx/pubhtml?gid=357174735&single=true"
