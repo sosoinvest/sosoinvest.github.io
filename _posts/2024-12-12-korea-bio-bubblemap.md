@@ -7,8 +7,8 @@ tag: [주식]
 toc: true
 author_profile: false
 header:
- teaser: /images/2024-12-12-korea-bio-etfs-bubblemap/bio-etf-bubblechart.webp
- og_image: /images/2024-12-12-korea-bio-etfs-bubblemap/bio-etf-bubblechart.webp
+ teaser: /images/2024-12-12-korea-bio-etfs-bubblemap/bio-etfs-bubble-chart.webp
+ og_image: /images/2024-12-12-korea-bio-etfs-bubblemap/bio-etfs-bubble-chart.webp
 # sidebar:
 #     nav: "docs"
 # search: true
@@ -19,12 +19,7 @@ header:
 
 ※ 참고로 전체 테마 ETF들의 리스트는 [국장 테마 ETF 모음](http://localhost:4000/%ED%88%AC%EC%9E%90/korea-theme-etfs/)에서 볼 수 있다.
 
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
-    <iframe src="/images/2024-12-12-korea-bio-etfs-bubblemap/bio-etfs-bubble-chart.html" 
-            style="position: absolute; width: 100%; height: 100%; border: none;" 
-            allowfullscreen>
-    </iframe>
-</div>
+<iframe src="/images/2024-12-12-korea-bio-etfs-bubblemap/bio-etfs-bubble-chart.html" width="100%" height="600" frameborder="0"></iframe>
 
 2024년 12월 12일 기준으로 모든 바이오 테마 ETF가 손해를 보지 않고있다. 코스피와 코스닥 지수가 연간 -2.78%, -11.26% 빠진 것과 대조된다.
 
