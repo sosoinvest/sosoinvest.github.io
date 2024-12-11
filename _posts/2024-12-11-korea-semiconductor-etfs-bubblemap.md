@@ -13,7 +13,11 @@ header:
 #     nav: "docs"
 # search: true
 ---
-국장 반도체 ETF의 지난 1년 성과는 처참하다. 아래는 반도체 테마 ETF들의 1년간 수익률과 변동성을 보여주는 버블 차트다.
+국장 반도체 ETF의 지난 1년 성과는 처참하다. 
+
+아래는 반도체 테마 ETF들의 1년간 수익률과 변동성을 보여주는 버블 차트다.
+
+※ 참고로 전체 테마 ETF들의 리스트는 [국장 테마 ETF 모음](http://localhost:4000/%ED%88%AC%EC%9E%90/korea-theme-etfs/)에서 볼 수 있다.
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="/images/2024-12-11-korea-semiconductor-etfs-bubblemap/semiconductor-etfs-bubble-chart.html" 
