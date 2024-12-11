@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "수익률 좋은 바이오  ETF TOP 10"
+title:  "국장 바이오 ETF 수익률 TOP 10"
 description: 국장 바이오 ETF들의 성과를 한눈에 보기위한 시각화 페이지
 categories: 투자
 tag: [주식]
