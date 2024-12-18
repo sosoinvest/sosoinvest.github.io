@@ -217,7 +217,7 @@ class Analyzer:
     self.analysis_result["Mean return lose"] = [f"{mean_return_lose} %"]
     self.analysis_result["RR ratio"] = [f"{np.round(mean_return_win/abs(mean_return_lose), 2)}"]
 
-  def max_mein_return(self):
+  def max_min_return(self):
     buy_signs = list(self.df["Buy sign"])
     total = list(self.df["Total"])
     returns_per_trading = []

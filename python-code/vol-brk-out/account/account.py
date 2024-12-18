@@ -29,6 +29,7 @@ class Account:
       "Revenue": [np.nan],
       "Return": [np.nan],
     }
+    self.net_input = 0
 
   def monitor(self):
     """
@@ -37,6 +38,7 @@ class Account:
     """
     print("The account_manager is updated.")
     print(tabulate(self.data, headers="keys", tablefmt="pretty"))
+    print(f"The total value of the account is {sum(self.data["Total"])}")
     print("\n")
 
   def deposit_cash(self, cash_amount):
@@ -47,6 +49,7 @@ class Account:
     """
     self.data["Amount"][0] += np.round(cash_amount, 2)  # It rounds off the amount of cash upto 2nd digits.
     self.data["Total"][0] = self.data["Amount"][0]  # The total value of the cash equals to the amount of cash.
+    self.net_input += cash_amount
     print(f"{cash_amount} cash is deposited. Now the cash is {self.data["Amount"][0]}.\n")
 
   def withdraw_cash(self, cash_amount):
@@ -57,6 +60,7 @@ class Account:
     """
     self.data["Amount"][0] -= np.round(cash_amount, 2)  # It rounds off the amount of cash upto 2nd digits.
     self.data["Total"][0] = self.data["Amount"][0]  # The total value of the cash equals to the amount of cash.
+    self.net_input -= cash_amount
     print(f"{cash_amount} cash is withdrawn. Now the cash is {self.data["Amount"][0]}.\n")
 
   def buy_asset(self, tikr, amount, price_buy, fee, tax, slippage, leverage):
@@ -163,13 +167,17 @@ class Account:
 
     if tikr in list(tikr_list):  # Check if tikr in the tikr_list
       index = tikr_list.index(tikr)
+      print(self.data)
+      print(index)
+      print(tikr_list)
+      print(price_bought_list)
       price_bought = price_bought_list[index]
 
       if amount in ["ALL", "All"]:  # If amount equals to all, sell all the assets in the account
         amount = amount_list[index]
 
       if amount > amount_list[index]:  # Check if the amount to sell is larger than amount having in the account
-        print(f"Cannot sell more than in the account_manager\n")
+        print(f"Cannot sell more than in the account\n")
 
       else:
         # Add selling money to cash
@@ -218,8 +226,7 @@ class Account:
       self.data["Revenue"][index] = revenue
       self.data["Total"][index] = total
       self.data["Return"][index] = return_data
-
-    else:  # Updates new asset
+    else:
       self.data["Ticker"].append(tikr)
       self.data["Amount"].append(amount)
       self.data["Price(bought)"].append(price_bought)
