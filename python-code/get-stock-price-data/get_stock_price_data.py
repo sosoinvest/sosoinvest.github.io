@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 
 
-TIKR = "SPY"
+TIKR = "005930.KS"
 interval = "1d"
 ticker = yf.Ticker(TIKR)
 # start = datetime.today() - timedelta(730)

@@ -1,5 +1,9 @@
 #BLOCK: Import modules
 import numpy as np
+from utils import intraday_generator
+from matplotlib import pyplot as plt
+from tabulate import tabulate
+import gc
 
 class Strategy:
   def __init__(self,
@@ -20,14 +24,15 @@ class Strategy:
     self.leverage = leverage
     self.losscut = losscut
     self.tikr = tikr
+    self.intra_day_generator = 0
 
   def get_price(self, ind, normal_factor):
     open = self.df["Open"][ind] / normal_factor
-    close = self.df["Close"][ind] / normal_factor
     high = self.df["High"][ind] / normal_factor
     low = self.df["Low"][ind] / normal_factor
+    close = self.df["Close"][ind] / normal_factor
 
-    return open, close, high, low
+    return open, high, low, close
 
   def logging_data(self,
                    today,
@@ -47,6 +52,12 @@ class Strategy:
     self.logger.log_data("Buy sign", buy_sign)
     self.logger.log_data("Target price", target_price * normal_factor)
     self.logger.log_data("Tag", tag)
+
+  def get_intra_day_data(self, filename):
+    gen = intraday_generator.IntraDayPreprocessor(filename = filename)
+    gen.normalize()
+    gen.range_change()
+    self.intra_day_generator = gen
 
 class VolBrkOut(Strategy):
   def __init__(self,
@@ -174,7 +185,7 @@ class VolBrkOut(Strategy):
       elif close_t <= open_t:
         self.account.sell_asset(tikr=self.tikr,
                                 amount="ALL",
-                                price_sell=0.5 * (high_t + open_t) * (1 - self.losscut),
+                                price_sell=0.5 * (close_t + open_t) * (1 - self.losscut),
                                 fee=self.fee,
                                 tax=self.tax,
                                 slippage=self.slippage)
@@ -260,4 +271,342 @@ class VolBrkOut(Strategy):
 
     return buy_sign, tag
 
+class VolBrkOut_intraday(Strategy):
+  def __init__(self, df,
+               account, logger, analyzer,
+               fee, tax, slippage,
+               leverage, losscut,
+               does_save,
+               tikr,
+               file_for_intra_day_patterns,
+               K=0.5):
+    super().__init__(df=df,
+                     account=account, logger=logger, analyzer=analyzer,
+                     fee=fee, tax=tax, slippage=slippage,
+                     leverage=leverage, losscut=losscut,
+                     does_save=does_save, tikr=tikr)
+    self.K = K
+    self.get_intra_day_data(file_for_intra_day_patterns)
 
+  def get_target_price(self, high_y, low_y, open_t, K):
+    price_width = high_y - low_y
+    target_price = open_t + K*price_width
+    return target_price
+
+  def run(self):
+    is_end_of_data = False
+    day_index = 0
+    normal_factor = 1
+    have_position = False
+    buy_sign = 0
+
+    while not is_end_of_data:
+      day_index += 1
+
+      if day_index > len(self.df) - 1:
+        is_end_of_data = True
+
+      else:
+        today = self.df["Date"][day_index][0:10]
+        print(today)
+        print(have_position)
+        print(sum(self.account.data["Total"]))
+
+        (open_y, high_y, low_y, close_y) = self.get_price(ind=day_index-1, normal_factor=normal_factor)
+
+        (open_t, high_t, low_t, close_t) = self.get_price(ind=day_index, normal_factor=normal_factor)
+
+        if len(self.account.data["Ticker"]) > 1:
+          index = self.account.data["Ticker"].index(self.tikr)
+          self.account.update_price(index, open_t)
+        else:
+          index = 1
+
+        target_price = self.get_target_price(high_y, low_y, open_t, self.K)
+
+        intra_day_price = self.intra_day_generator.generate_intraday_data(open_t, high_t, low_t, close_t, n=3)
+
+        try:
+          loss_cut_price = max(self.account.data["Price(bought)"][index], open_t)
+        except:
+          loss_cut_price = open_t
+
+        continue_trading = True
+
+        intra_day_ind = -1
+
+        for price in intra_day_price:
+          intra_day_ind += 1
+
+          if np.mod(intra_day_ind, 100) == 0:
+            plt.plot(intra_day_price)
+            try:
+              plt.axhline(y=self.account.data["Price(bought"][index], color="blue", label="meanprice")
+            except:
+              pass
+            plt.axhline(y=loss_cut_price*(1-self.losscut), color="red", label="losscut")
+            plt.axhline(y=target_price, color="black", label="target")
+            plt.plot(intra_day_ind, price, marker="o")
+            plt.ylim((low_t, high_t))
+            plt.legend()
+            plt.show()
+
+          if continue_trading:
+            if have_position:
+              loss_cut_price = max(loss_cut_price, price)
+              loss_cut = loss_cut_price * (1-self.losscut)
+              if price<loss_cut:
+                print("sell operation occurs")
+                print(f"loss cut price: {loss_cut} and current price: {price}")
+
+                self.sell_operation(price=price, size="ALL", index=index)
+                self.account.data["Price(bought)"][index] = 0
+                buy_sign = 0
+                have_position = False
+                continue_trading = False
+
+            else:
+              if buy_sign == 0:
+                if price > target_price:
+                  print("Buy operation occurs")
+                  self.buy_operation(price=price, size=1)
+                  buy_sign = 1
+              else:
+                loss_cut_price = max(self.account.data["Price(bought)"][index], price)
+                loss_cut = loss_cut_price * (1-self.losscut)
+                if price < loss_cut:
+                  print("Loss cut occurs")
+                  self.sell_operation(price=price, size="ALL", index=index)
+                  self.account.data["Price(bought)"][index] = 0
+                  buy_sign = 0
+                  have_position = False
+                  continue_trading = False
+          if buy_sign:
+            have_position = True
+
+      # BLOCK: Logging the trading data
+      self.logging_data(today=today,
+                        open=open_t, close=close_t, high=high_t, low=low_t,
+                        target_price=target_price, normal_factor=normal_factor,
+                        buy_sign=buy_sign, tag="none")
+
+    self.account.sell_asset(tikr=self.tikr,
+                            amount="ALL",
+                            price_sell=self.df["Close"].iloc[-1] / normal_factor,
+                            fee=self.fee,
+                            tax=self.tax,
+                            slippage=self.slippage)
+    self.logger.print_in_dataframe()
+
+    self.logger.save_data(filename=f"Backtest_Result_{self.tikr}_Vol_Brk_Out_K={self.K}.csv")
+    self.analyzer.filename = f"Backtest_Result_{self.tikr}_Vol_Brk_Out_K={self.K}.csv"
+    self.analyzer.report()
+    if self.does_save:
+      self.analyzer.save_report()
+
+  def buy_operation(self, price, size):
+    cash = self.account.data["Total"][0]
+    amount_to_buy = np.floor(size * cash / price *100)/100
+    self.account.buy_asset(tikr=self.tikr,
+                           amount=amount_to_buy,
+                           price_buy=price,
+                           fee=self.fee,
+                           tax=self.tax,
+                           slippage=self.slippage,
+                           leverage=self.leverage)
+
+  def sell_operation(self, price, size, index):
+    if size != "ALL":
+      amount_to_sell = self.account.data["Amount"][index]*size
+    else:
+      amount_to_sell = size
+      self.account.sell_asset(tikr=self.tikr,
+                              amount=amount_to_sell,
+                              price_sell=price,
+                              fee=self.fee,
+                              tax=self.tax,
+                              slippage=self.slippage)
+
+class VolBrkOut_intraday2(Strategy):
+  def __init__(self, df,
+               account, logger, analyzer,
+               fee, tax, slippage,
+               leverage, losscut,
+               does_save,
+               tikr,
+               file_for_intra_day_patterns,
+               K=0.5):
+    super().__init__(df=df,
+                     account=account, logger=logger, analyzer=analyzer,
+                     fee=fee, tax=tax, slippage=slippage,
+                     leverage=leverage, losscut=losscut,
+                     does_save=does_save, tikr=tikr)
+    self.K = K
+    self.get_intra_day_data(file_for_intra_day_patterns)
+
+  def get_target_price(self, high_y, low_y, open_t, K):
+    price_width = high_y - low_y
+    target_price = open_t + K*price_width
+    return target_price
+
+  def run(self):
+    is_end_of_data = False
+    day_index = 0
+    normal_factor = 1
+    have_position = 0
+
+
+    while not is_end_of_data:
+      # input("")
+      day_index += 1
+
+      if day_index > len(self.df) - 1:
+        is_end_of_data = True
+
+      else:
+        today = self.df["Date"][day_index][0:10]
+        print(today)
+        print(sum(self.account.data["Total"]))
+        if have_position:
+          print(f"Open: {np.round(position.price_open,3)} / "
+                f"Close: {np.round(position.price_close,3)} / "
+                f"High: {np.round(position.price_high,3)}")
+        print("\n")
+
+        (open_y, high_y, low_y, close_y) = self.get_price(ind=day_index-1, normal_factor=normal_factor)
+        (open_t, high_t, low_t, close_t) = self.get_price(ind=day_index, normal_factor=normal_factor)
+
+        if len(self.account.data["Ticker"]) > 1:
+          self.account.update_price(1, open_t)
+
+        target_price = self.get_target_price(high_y, low_y, open_t, self.K)
+
+        intra_day_price = self.intra_day_generator.generate_intraday_data(open_t, high_t, low_t, close_t, n=3)
+        intra_day_ind = -1
+
+        cash = self.account.data["Total"][0]
+        high_ = 0
+        trading_continue = True
+
+        if have_position:
+          if open_t < position.price_close:
+            position.close_pos(open_t)
+            have_position = 0
+            print(f"The return is:{np.round(100 * (price - position.price_open) / position.price_open)}")
+
+        for price in intra_day_price:
+
+          # if np.mod(intra_day_ind, 100) == 0:
+          #   plt.plot(intra_day_price)
+          #   plt.axhline(y=target_price, color="black", label="target")
+          #   try:
+          #     # plt.axhline(y=self.account.data["Price(bought"][index], color="blue", label="meanprice")
+          #     plt.axhline(y=position.price_close, color="red", label="losscut")
+          #   except:
+          #     pass
+          #   plt.plot(intra_day_ind, price, marker="o")
+          #   plt.ylim((low_t, high_t))
+          #   plt.legend()
+            # plt.show()
+
+
+          intra_day_ind += 1
+
+          # BLOCK: Update the high price
+          high_ = max(high_, price)
+          if trading_continue:
+            if have_position:
+              position.price_high = max(position.price_high, high_)
+              position.price_close = position.price_open*(1-self.losscut) + 0.9*(position.price_high - position.price_open)
+              # print(position.price_open)
+              # print(position.price_high)
+              # print(f"Updated: {position.price_close}")
+              # if position.price_close*(1-0.5*0.01) < price < position.price_close*(1+0.5*0.01):
+              if price < position.price_close * (1):
+                # print(f"Position close(loss cut) at {np.round(price,2)} / (close target: {np.round(position.price_close,2)}")
+                # print(f"Slippage: {np.round(100*(price-position.price_close) / position.price_close,2)}%")
+                print(f"The return is:{np.round(100*(price-position.price_open)/position.price_open)}")
+                position.close_pos(price)
+                have_position = 0
+                trading_continue = False
+            else:
+              # BLOCK: Open position
+              if target_price*(1-0.5*0.01) < price < target_price*(1+0.5*0.01) and cash > 0:
+                # print(f"Position open at {np.round(price,2)} / (target: {np.round(target_price,2)})")
+                # print(f"The close price is: {np.round(price*(1-self.losscut),2)}")
+                # print(f"Slippage: {np.round(100*(target_price-price) / target_price,2)}%")
+                high_ = price
+                position_size = np.floor(cash / price * 100) / 100
+                position=Position(tikr=self.tikr,
+                                  price_open=price, price_high=price,
+                                  amount=position_size, price_close=price*(1-self.losscut),
+                                  account=self.account, fee=self.fee, tax=self.tax, slippage=0)
+                position.open_pos(price)
+                position.price_high = high_
+                cash = self.account.data["Total"][0]
+                have_position = 1
+
+      # BLOCK: Logging the trading data
+      self.logging_data(today=today,
+                        open=open_t, close=close_t, high=high_t, low=low_t,
+                        target_price=target_price, normal_factor=normal_factor,
+                        buy_sign=have_position, tag="none")
+
+    self.account.sell_asset(tikr=self.tikr,
+                            amount="ALL",
+                            price_sell=self.df["Close"].iloc[-1] / normal_factor,
+                            fee=self.fee,
+                            tax=self.tax,
+                            slippage=self.slippage)
+    self.logger.print_in_dataframe()
+
+    self.logger.save_data(filename=f"Backtest_Result_{self.tikr}_Vol_Brk_Out_K={self.K}.csv")
+    self.analyzer.filename = f"Backtest_Result_{self.tikr}_Vol_Brk_Out_K={self.K}.csv"
+    self.analyzer.report()
+    if self.does_save:
+      self.analyzer.save_report()
+
+
+class Position:
+  def __init__(self, tikr,
+               price_open, price_high, price_close,
+               amount,
+               account, fee, tax, slippage):
+    self.account=account
+    self.fee=fee
+    self.tax=tax
+    self.slippage=slippage
+    self.tikr = tikr
+    self.price_open = price_open
+    self.price_close = price_close
+    self.price_high = price_high
+    self.amount = amount
+
+  def open_pos(self, price):
+    self.account.buy_asset(tikr=self.tikr,
+                           amount=self.amount,
+                           price_buy=price,
+                           fee=self.fee,
+                           tax=self.tax,
+                           slippage=self.slippage,
+                           leverage=1)
+
+  def close_pos(self, price):
+    self.account.sell_asset(tikr=self.tikr,
+                           amount="ALL",
+                           price_sell=price,
+                           fee=self.fee,
+                           tax=self.tax,
+                           slippage=self.slippage)
+
+  def monitor(self):
+    data = {
+      "TIKR": self.tikr,
+      "Amount": self.amount,
+      "Price (open)": self.price_open,
+      "Price (close)": self.price_close,
+      "Price (high)": self.price_high,
+    }
+
+    print(data)
+    print("\n")

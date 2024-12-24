@@ -27,7 +27,7 @@ class Backtester:
     self.account.deposit_cash(deposit_cash)
 
     self.df = pd.read_csv(filename)
-    self.set_window(window=window)
+    # self.set_window(window=window)
 
     if strategy == "VolBrkOut":
       self.strategy = trading_strategy.VolBrkOut(df=self.df,
@@ -37,6 +37,16 @@ class Backtester:
                                                  does_save=self.does_save,
                                                  tikr=self.tikr,
                                                  K=params["K"])
+    elif strategy == "VolBrkOut_intraday":
+      self.strategy = trading_strategy.VolBrkOut_intraday2(df=self.df,
+                                                          account=self.account, logger=self.logger, analyzer=self.analyzer,
+                                                          fee=self.fee, tax=self.tax, slippage=self.slippage,
+                                                          leverage=self.leverage, losscut=self.losscut,
+                                                          does_save=self.does_save,
+                                                          tikr=self.tikr,
+                                                          file_for_intra_day_patterns = params["file_for_intra_day_patterns"],
+                                                          K=params["K"])
+
   def run(self):
     self.strategy.run()
 
@@ -52,7 +62,7 @@ class Backtester:
       try:
         date = self.df["Date"][ind + window]
         open = self.df["Open"][ind]
-        close = self.df["Open"][ind + window]
+        close = self.df["Close"][ind + window]
         high = max(self.df["High"][ind : ind+window])
         low = min(self.df["Low"][ind: ind + window])
 

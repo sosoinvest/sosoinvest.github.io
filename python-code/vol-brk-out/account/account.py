@@ -61,7 +61,7 @@ class Account:
     self.data["Amount"][0] -= np.round(cash_amount, 2)  # It rounds off the amount of cash upto 2nd digits.
     self.data["Total"][0] = self.data["Amount"][0]  # The total value of the cash equals to the amount of cash.
     self.net_input -= cash_amount
-    print(f"{cash_amount} cash is withdrawn. Now the cash is {self.data["Amount"][0]}.\n")
+    # print(f"{cash_amount} cash is withdrawn. Now the cash is {self.data["Amount"][0]}.\n")
 
   def buy_asset(self, tikr, amount, price_buy, fee, tax, slippage, leverage):
     """
@@ -90,7 +90,7 @@ class Account:
 
     # BLOCK: Apply leverage
     amount = amount * leverage
-    print(f"The amount is {amount} considering the leverage ratio of {leverage}.")
+    # print(f"The amount is {amount} considering the leverage ratio of {leverage}.")
 
     # BLOCK: Buy an asset in the account manager already
     if tikr in tikr_list:
@@ -138,7 +138,7 @@ class Account:
       # Withdraws cash from the account
       self.withdraw_cash(amount * price_bought_new * (1 + fee))
 
-    print(f"You bought. \nTIKR: {tikr} / Amount: {amount} / Price: {price_bought_new} ")
+    # print(f"You bought. \nTIKR: {tikr} / Amount: {amount} / Price: {price_bought_new} ")
 
     # Monitor current account_manager
     # self.monitor()
@@ -167,10 +167,10 @@ class Account:
 
     if tikr in list(tikr_list):  # Check if tikr in the tikr_list
       index = tikr_list.index(tikr)
-      print(self.data)
-      print(index)
-      print(tikr_list)
-      print(price_bought_list)
+      # print(self.data)
+      # print(index)
+      # print(tikr_list)
+      # print(price_bought_list)
       price_bought = price_bought_list[index]
 
       if amount in ["ALL", "All"]:  # If amount equals to all, sell all the assets in the account
@@ -200,7 +200,7 @@ class Account:
         self.update(index, tikr, amount_new,
                     price_bought, price_sell, revenue_new,
                     total_new, return_new)
-        print(f"You sold. \nTIKR: {tikr} / Amount: {amount} / Price: {price_sell} ")
+        # print(f"You sold. \nTIKR: {tikr} / Amount: {amount} / Price: {price_sell} ")
     else:
       print("Cannot sell what is not in the account_manager\n")
 
