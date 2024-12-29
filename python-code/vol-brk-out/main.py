@@ -6,31 +6,31 @@ from matplotlib.ticker import MaxNLocator
 plt.rcParams["font.family"] = "Malgun Gothic"
 plt.rcParams["axes.unicode_minus"] = False
 
-TIKR = "TQQQ"
+TIKR = "IWM"
 K = 0.5
 does_save = False
-# my_tester = tester100.Backtester(filename=f"data/{TIKR}.csv",
-#                                  tikr=TIKR,
-#                                  does_save=does_save,
-#                                  fee=0.15*0.01, tax=0.0, slippage=0.1*0.01, leverage=1,
-#                                  losscut=0.5*0.01,
-#                                  deposit_cash=10000,
-#                                  strategy="VolBrkOut",
-#                                  params={"K": K},
-#                                  window=1)
-# my_tester.run()
-
 my_tester = tester100.Backtester(filename=f"data/{TIKR}.csv",
                                  tikr=TIKR,
                                  does_save=does_save,
-                                 fee=0.15*0.01, tax=0.0, slippage=0*0.01, leverage=1,
-                                 losscut=3*0.01,
+                                 fee=0.25*0.01, tax=0.0, slippage=0.1*0.01, leverage=1,
+                                 losscut=0.5*0.01,
                                  deposit_cash=10000,
-                                 strategy="VolBrkOut_intraday",
-                                 params={"K": K,
-                                         "file_for_intra_day_patterns":f"utils/intraday_data/{TIKR}_2024-10-19_2024-12-18_interval=2m.csv"},
+                                 strategy="VolBrkOut",
+                                 params={"K": K},
                                  window=1)
 my_tester.run()
+
+# my_tester = tester100.Backtester(filename=f"data/{TIKR}.csv",
+#                                  tikr=TIKR,
+#                                  does_save=does_save,
+#                                  fee=0.15*0.01, tax=0.0, slippage=0*0.01, leverage=1,
+#                                  losscut=3*0.01,
+#                                  deposit_cash=10000,
+#                                  strategy="VolBrkOut_intraday",
+#                                  params={"K": K,
+#                                          "file_for_intra_day_patterns":f"utils/intraday_data/{TIKR}_2024-10-19_2024-12-18_interval=2m.csv"},
+#                                  window=1)
+# my_tester.run()
 
 # filename = f"Backtest_Result_{TIKR}_Vol_Brk_Out_K={K}.csv"
 # df = pd.read_csv(filename)

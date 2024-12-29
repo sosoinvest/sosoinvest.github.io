@@ -2,20 +2,18 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import scipy
 import numpy as np
+import data
 
 def get_merged_dataframe(filename):
-  filename = filename + ".csv"
-  df = pd.read_csv(filename)
+  df = pd.read_csv(filename + ".csv")
   ind = 0
   is_loop_on = True
 
   while is_loop_on:
     print(ind)
     ind += 1
-    filenmae = f"{filename} ({ind}).csv"
-
     try:
-      new_df = pd.read_csv(filename)
+      new_df = pd.read_csv(f"{filename} ({ind}).csv")
       df = pd.merge(df, new_df, how="outer")
     except:
       is_loop_on = False
@@ -60,7 +58,6 @@ def data_to_dict(filename):
   volume_list = []
 
   day = df["Time"][0][:10].replace(" ", "")
-  ind = 0
 
   for i in range(len(df["Time"])):
     if day == df["Time"][i][:10].replace(" ", ""):
@@ -116,7 +113,12 @@ def data_to_dict(filename):
       day = df["Time"][i][:10].replace(" ", "")
 
     print(i)
+
   df2 = pd.DataFrame(data_dict)
   df2.to_json(f"{filename.replace(".csv", ".json")}")
 
+# filename = f"data/SOXL_intraday_data/soxl_intraday-1min_historical-data-download-12-24-2024"
+# get_merged_dataframe(filename)
 
+remove_no_data("merged_SOXL.csv")
+data_to_dict("merged_SOXL.csv")
