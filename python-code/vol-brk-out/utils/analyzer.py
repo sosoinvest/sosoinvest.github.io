@@ -112,6 +112,7 @@ class Analyzer:
     :return:
     """
     cagr = 1
+    print(self.daily_return)
     for daily_return in self.daily_return:
       cagr *= (daily_return * 0.01 + 1)
     cagr = cagr ** (1 / len(self.daily_return)) - 1  # The geometric mean return of the daily return

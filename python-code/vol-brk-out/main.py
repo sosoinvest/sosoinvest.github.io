@@ -6,16 +6,17 @@ from matplotlib.ticker import MaxNLocator
 plt.rcParams["font.family"] = "Malgun Gothic"
 plt.rcParams["axes.unicode_minus"] = False
 
-TIKR = "IWM"
 K = 0.5
+TIKR = "merged_AAPL"
+
 does_save = False
-my_tester = tester100.Backtester(filename=f"data/{TIKR}.csv",
+my_tester = tester100.Backtester(filename=f"E:/intraday-data/{TIKR}.json",
                                  tikr=TIKR,
                                  does_save=does_save,
-                                 fee=0.25*0.01, tax=0.0, slippage=0.1*0.01, leverage=1,
-                                 losscut=0.5*0.01,
+                                 fee=0.07*0.0, tax=0.0, slippage=0.0*0.01, leverage=1,
+                                 losscut=10*0.01,
                                  deposit_cash=10000,
-                                 strategy="VolBrkOut",
+                                 strategy="VolBrkOut_intraday",
                                  params={"K": K},
                                  window=1)
 my_tester.run()
