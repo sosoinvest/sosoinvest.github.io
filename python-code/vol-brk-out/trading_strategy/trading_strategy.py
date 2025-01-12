@@ -280,6 +280,14 @@ class VolBrkOut_intraday(Strategy):
                      does_save=does_save, tikr=tikr)
     self.K = K
 
+  def get_atr(self, day_index, window):
+    tr_list = []
+    for day in range(day_index-window, day_index):
+      A = self.df["High(Day)"][day] - self.df["Close(Day)"][day-1]
+      B = self.df["Close(Day)"][day-1] - self.df["Open(Day)"][day]
+      C = self.df["High(Day)"][day] - self.df["Low(Day)"][day]
+      tr = max(A,B,C)
+      tr_list.append(tr)
 
   def get_target_price(self, high_y, low_y, open_t, K):
     price_width = high_y - low_y
@@ -292,6 +300,10 @@ class VolBrkOut_intraday(Strategy):
     buy_sign = 0
     positions = []
 
+    day_index_init = 1
+    money_init = sum(self.account.data["Total"])
+    year_return_filter = True
+
     while not is_end_of_data:
       day_index += 1
 
@@ -300,6 +312,17 @@ class VolBrkOut_intraday(Strategy):
 
       else:
         today = self.df["Day"][day_index]
+        year1 = self.df["Day"][day_index][:4]
+        year2 = self.df["Day"][day_index-1][:4]
+        new_year = year2!=year1
+        annual_return = (sum(self.account.data["Total"]) - money_init) / money_init
+
+        if new_year:
+          money_init = sum(self.account.data["Total"])
+          year_return_filter = True
+        elif annual_return <-0.3:
+          year_return_filter = False
+
         print(today)
         print(sum(self.account.data["Total"]))
 
@@ -324,11 +347,9 @@ class VolBrkOut_intraday(Strategy):
         target_price = self.get_target_price(high_y, low_y, open_t, self.K*0.6)
         intraday_price = self.df["Close"][day_index]
 
-        continue_trading = True
-
         position_ind = 0
         for position in positions:
-          if position.high < open_t:
+          if position.high < open_t or not year_return_filter:
             self.account.sell_asset(tikr=self.tikr,
                                     amount=position.size,
                                     price_sell=open_t,
@@ -346,7 +367,7 @@ class VolBrkOut_intraday(Strategy):
           intra_day_ind += 1
           high = max(high, price)
 
-          if pctrange > 0.1:
+          if pctrange > 0.075 or not year_return_filter:
             continue_trading = False
           else:
             continue_trading = True
@@ -388,9 +409,20 @@ class VolBrkOut_intraday(Strategy):
                                      slippage = self.slippage)
               del positions[position_ind]
 
-            elif position.day == today:
+            elif position.day != today and (price-position.price)/position.price>0.2:
+              self.account.sell_asset(tikr=self.tikr,
+                                      amount=position.size,
+                                      price_sell=price,
+                                      fee=self.fee,
+                                      tax=self.tax,
+                                      slippage=self.slippage)
+              del positions[position_ind]
+
+              # elif position.day == today:
+            else:
               position.high = max(position.high, high)
               position.losscut = position.high*(1-self.losscut)
+              # position.losscut += position.high - position.price
 
             position_ind += 1
 

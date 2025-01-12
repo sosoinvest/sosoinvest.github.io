@@ -59,7 +59,8 @@ class Analyzer:
     self.num_of_days()
     self.final_return()
     self.buy_and_hold_return()
-    self.mdd()
+    self.mdd("Portfolio")
+    self.mdd("Buy and Hold")
     self.cagr()
     self.num_of_trades()
     self.num_of_wins()
@@ -67,8 +68,8 @@ class Analyzer:
     self.sharp_ratio(case="Portfolio")
     self.sharp_ratio(case="Buy and hold")
     self.mean_return()
-    self.max_min_return()
-    self.max_serial_win()
+    # self.max_min_return()
+    # self.max_serial_win()
     self.annual_analysis()
 
     print(tabulate(self.analysis_result, headers="keys", tablefmt="pretty"))
@@ -93,18 +94,25 @@ class Analyzer:
     final_return = np.round((terminal - initial) / initial * 100, 2)
     self.analysis_result["Final return"] = [f"{final_return} %"]
 
-  def mdd(self):
+  def mdd(self, option):
     """
     Computes the MDD(Maximum Draw Down)
     :return:
     """
     max_run = 0
     mdd = 0
-    for money in self.df["Total"]:
-      max_run = max(money, max_run)
-      mdd = min(mdd, (money - max_run) / max_run)
-    mdd *= 100
-    self.analysis_result["MDD"] = [f"{np.round(mdd, 2)} %"]
+    if option != "Buy and Hold":
+      for money in self.df["Total"]:
+        max_run = max(money, max_run)
+        mdd = min(mdd, (money - max_run) / max_run)
+      mdd *= 100
+      self.analysis_result["MDD"] = [f"{np.round(mdd, 2)} %"]
+    else:
+      for money in self.df["Close"]:
+        max_run = max(money, max_run)
+        mdd = min(mdd, (money - max_run) / max_run)
+      mdd *= 100
+      self.analysis_result["MDD(Buy and Hold)"] = [f"{np.round(mdd, 2)} %"]
 
   def cagr(self):
     """
