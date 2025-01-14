@@ -6,8 +6,8 @@ from matplotlib.ticker import MaxNLocator
 plt.rcParams["font.family"] = "Malgun Gothic"
 plt.rcParams["axes.unicode_minus"] = False
 
-K = 0.5
-TIKR = "merged_TMF"
+K = 1.
+TIKR = "merged_LABD"
 
 does_save = False
 my_tester = tester100.Backtester(filename=f"E:/intraday-data/{TIKR}.json",

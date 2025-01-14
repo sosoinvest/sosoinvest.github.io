@@ -1,0 +1,97 @@
+종목명,티커,배율,상장일,기초지수,시가총액,구성종목수
+Single Stock ETFS,,,,,,
+Direxion Daily AAPL Bull 2X Shares  ,AAPU,2,2022.08.08,AAPL,97.9M,
+Direxion Daily AAPL Bear 1X Shares ,AAPD,-1,2022.08.08,AAPL,25.6M,
+Direxion Daily AMZN Bull 2X Shares ,AMZU,2,2022.09.06,AMZN,205.9M,
+Direxion Daily AMZN Bear 1X Shares,AMZD,-1,2022.09.06,AMZN,4.9M,
+Direxion Daily AVGO Bull 2X Shares,AVL,2,2024.10.09,AVGO,44.3M,
+Direxion Daily AVGO Bear 1X Shares,AVS,-1,2024.10.09,AVGO,8.6M,
+Direxion Daily BRKB Bull 2X Shares,BRKU,2,2024.12.10,BRKB,7.8M,
+Direxion Daily BRKB Bear 1X Shares,BRKD,-1,2024.12.10,BRKB,3.2M,
+Direxion Daily GOOGL Bull 2X Shares,GGLL,2,2022.09.06,GOOGL,168.1M,
+Direxion Daily GOOGL Bear 1X Shares,GGLS,-1,2022.09.06,GOOGL,4.0M,
+Direxion Daily META Bull 2X Shares ,METU,2,2024.06.05,META,44.9M,
+Direxion Daily META Bear 1X Shares,METD,-1,2024.06.05,META,5.0M,
+Direxion Daily MSFT Bull 2X Shares,MSFU,2,2022.09.06,MSFT,115.5M,
+Direxion Daily MSFT Bear 1X Shares,MSFD,-1,2022.09.06,MSFT,5.5M,
+Direxion Daily MU Bull 2X Shares,MUU,2,2024.10.09,MU,21.4M,
+Direxion Daily MU Bear 1X Shares,MUD,-1,2024.10.09,MU,4.3M,
+Direxion Daily NFLX Bull 2X Shares,NFXL,2,2024.10.02,NFLX,12.7M,
+Direxion Daily NFLX Bear 1X Shares,NFXS,-1,2024.10.02,NFLX,5.5M,
+Direxion Daily NVDA Bull 2X Shares,NVDU,2,2023.09.12,NVDA,715.5M,
+Direxion Daily NVDA Bear 1X Shares,NVDD,-1,2023.09.12,NVDA,21.4M,
+Direxion Daily PLTR Bull 2X Shares,PLTU,2,2024.12.10,PLTR,32.4M,
+Direxion Daily PLTR Bear 1X Shares,PLTD,-1,2024.12.10,PLTR,8.2M,
+Direxion Daily TSLA Bull 2X Shares,TSLL,2,2022.08.08,TSLA,4907.4M,
+Direxion Daily TSLA Bear 1X Shares,TSLS,-1,2022.08.08,TSLA,63.0M,
+Direxion Daily TSM Bull 2X Shares,TSMX,2,2024.10.02,TSM,86.3M,
+Direxion Daily TSM Bear 1X Shares,TSMZ,-1,2024.10.02,TSM,2.6M,
+Fixed income x3,,,,,,
+Direxion Daily 20+ Year Treasury Bull 3X Shares, TMF,3,2009.04.16,ICE U.S. Treasury 20+ Year Bond TR USD,5040.5,8
+Direxion Daily 20+ Year Treasury Bear 3X Shares,TMV,-3,2009.04.16,ICE U.S. Treasury 20+ Year Bond TR USD,211.5,11
+Direxion Daily 7-10 Year Treasury Bull 3X Shares,TYD,3,2009.04.16,ICE U.S. Treasury 7-10 Year Bond TR USD,46,6
+Direxion Daily 7-10 Year Treasury Bear 3X Shares,TYO,-3,2009.04.16,ICE U.S. Treasury 7-10 Year Bond TR USD,17.2,6
+International x3,,,,,,
+Direxion Daily FTSE China Bull 3X Shares,YINN,3,2009.12.03,FTSE China 50 NR USD,1337.2,8
+Direxion Daily FTSE China Bear 3X Shares,YANG,-3,2009.12.03,FTSE China 50 NR USD,173.8,8
+Direxion Daily FTSE Europe Bull 3X Shares,EURL,3,2014.01.22,FTSE Developed Europe All Cap NR USD,15,6
+Direxion Daily MSCI Emerging Markets Bull 3X Shares,EDC,3,2008.12.17,MSCI EM GR USD,60.6,6
+Direxion Daily MSCI Emerging Markets Bear 3X Shares,EDZ,-3,2008.12.17,MSCI EM GR USD,22.7,6
+Direxion Daily MSCI Mexico Bull 3X Shares,MEXX,3,2017.05.03,MSCI Mexico IMI 25-50 NR USD,17.4,7
+Direxion Daily MSCI South Korea Bull 3X Shares,KORU,3,2013.04.10,MSCI Korea 25-50 NR USD,103.3,9
+Market cap x3,,,,,,
+Direxion Daily Mid Cap Bull 3X Shares,MIDU,3,2009.01.08,S&P MidCap 400 TR,94.7,406
+Direxion Daily S&P 500 Bull 3X Shares,SPXL,3,2008.11.05,S&P500 TR USD,4889.1,511
+Direxion Daily S&P 500 Bear 3X Shares,SPXS,-3,2008.11.05,S&P500 TR USD,373.4,12
+Direxion Daily Small Cap Bull 3X Shares,TNA,3,2008.11.05,Russell 2000 TR USD,2349.3,9
+Direxion Daily Small Cap Bear 3X Shares,TZA,-3,2008.11.05,Russell 2000 TR USD,289.2,14
+Sector equity x3,,,,,,
+Direxion Daily Aerospace & Defense Bull 3X Shares,DFEN,3,2017.05.03,DJ US Select Aerospace&Defense TR USD,167.3,43
+Direxion Daily Consumer Discretionary Bull 3X Shares ,WANT,3,2018.11.29,S&P Consumer Disc Select Sector TR USD,28.7,55
+Direxion Daily Dow Jones Internet Bull 3X Shares,WEBL,3,2019.11.07,DJ Internet Composite TR USD,155.5,46
+Direxion Daily Dow Jones Internet Bear 3X Shares,WEBS,-3,2019.11.07,DJ Internet Composite TR USD,12.4,7
+Direxion Daily Financial Bull 3X Shares,FAS,3,2008.11.06,Financials Select Sector TR USD,2368.8,80
+Direxion Daily Financial Bear 3X Shares,FAZ,-3,2008.11.06,Financials Select Sector TR USD,92.3,10
+Direxion Daily Healthcare Bull 3X Shares,CURE,3,2011.06.15,S&P Health Care Select Sector TR USD,179.1,70
+Direxion Daily Homebuilders & Supplies Bull 3X Shares ,NAIL,3,2015.08.19,DJ US Select Home Construction TR USD,267.4,52
+Direxion Daily Industrials Bull 3X Shares,DUSL,3,2017.05.03,S&P Industrial Select Sector TR USD,33.7,83
+Direxion Daily Pharmaceutical & Medical Bull 3X Shares ,PILL,3,2017.11.15,S&P Pharms Select Sector TR USD,13.1,51
+Direxion Daily Real Estate Bull 3X Shares,DRN,3,2009.07.16,Real Estate Select Sector TR USD,68.3,35
+Direxion Daily Real Estate Bear 3X Shares,DRV,-3,2009.07.16,Real Estate Select Sector TR USD,67.9,7
+Direxion Daily Regional Banks Bull 3X Shares,DPST,3,2015.08.19,S&P Regional Banks Select Sector TR USD,695.7,150
+Direxion Daily Retail Bull 3X Shares,RETL,3,2010.07.14,S&P Retail Select Sector TR USD,39.5,86
+Direxion Daily S&P 500® High Beta Bull 3X Shares,HIBL,3,2019.11.07,S&P 500 High Beta TR USD,33.9,105
+Direxion Daily S&P 500® High Beta Bear 3X Shares,HIBS,-3,2019.11.07,S&P 500 High Beta TR USD,24.2,8
+Direxion Daily S&P Biotech Bull 3X Shares,LABU,3,2015.05.28,S&P Biotechnology Select Sector TR USD,758.8,150
+Direxion Daily S&P Biotech Bear 3X Shares,LABD,-3,2015.05.28,S&P Biotechnology Select Sector TR USD,56.1,11
+Direxion Daily Semiconductor Bull 3X Shares,SOXL,3,2010.03.11,NYSE Semiconductor TR USD,9126.4,44
+Direxion Daily Semiconductor Bear 3X Shares,SOXS,-3,2010.03.11,NYSE Semiconductor TR USD,725.1,7
+Direxion Daily Technology Bull 3X Shares,TECL,3,2008.12.17,S&P Technology Select Sector TR USD,3025.9,76
+Direxion Daily Technology Bear 3X Shares,TECS,-3,2008.12.17,S&P Technology Select Sector TR USD,81.2,12
+Direxion Daily Transportation Bull 3X Shares,TPOR,3,2017.05.03,S&P Transpt Sel Ind FMC Cap TR USD,18.7,54
+Direxion Daily Utilities Bull 3X Shares,UTSL,3,2017.05.03,S&P Utilities Select Sector TR USD,44.3,37
+International equity x2,,,,,,
+Direxion Daily CSI 300 China A Share Bull 2X Shares,CHAU,2,2015.04.16,CSI 300 NR USD,292.9,7
+Direxion Daily CSI China Internet Index Bull 2X Shares,CWEB,2,2016.11.02,CSI 300 NR USD,252.2,7
+Direxion Daily MSCI Brazil Bull 2X Shares,BRZU,2,2013.04.10,MSCI Brazil 25-50 NR USD,117.3,6
+Direxion Daily MSCI Emerging Markets ex China Bull 2X Shares ,XXCH,2,2024.02.07,MSCI Emerging Markets ex China NR USD,3.2,6
+Direxion Daily MSCI India Bull 2X Shares,INDL,2,2010.03.11,MSCI India NR USD,74.2,6
+Sector equity x2,,,,,,
+Direxion Daily AI and Big Data Bull 2X Shares,AIBU,2,2024.05.15,Solactive US AI & Big Data USD,10.9,36
+Direxion Daily AI and Big Data Bear 2X Shares,AIBD,-2,2024.05.15,Solactive US AI & Big Data USD,2.1,6
+Direxion Daily Cloud Computing Bull 2X Shares,CLDL,2,2021.01.08,Indxx USA Cloud Computing NTR USD,7.6,53
+Direxion Daily Crypto Industry Bull 2X Shares,LMBO,2,2024.07.16,Solactive Dist Led & Dec Pay Tech TR USD,4,30
+"Direxion Daily Electric and Autonomous Vehicles Bull 2X Shares",EVAV,2,2022.08.10,Indxx US Ele & Auto Veh USD,5.2,27
+Direxion Daily Energy Bull 2X Shares,ERX,2,2008.11.06,S&P Energy Select Sector TR USD,294.2,32
+"Direxion Daily Energy Bear 2X Shares",ERY,-2,2008.11.06,S&P Energy Select Sector TR USD,15.1,6
+Direxion Daily Gold Miners Index Bull 2X Shares,NUGT,2,2010.12.08,NYSE Arca Gold Miners TR USD,545.2,8
+Direxion Daily Gold Miners Index Bear 2X Shares,DUST,-2,2010.12.08,NYSE Arca Gold Miners TR USD,90.8,6
+"Direxion Daily Junior Gold Miners Index Bull 2X Shares",JNUG,2,2013.10.03,MVIS Global Junior Gold Miners NR USD,285.6,7
+Direxion Daily Junior Gold Miners Index Bear 2X Shares,JDST,-2,2013.10.03,MVIS Global Junior Gold Miners NR USD,42.7,7
+Direxion Daily Magnificent 7 Bull 2X Shares,QQQU,2,2024.03.06,Indxx Front of the Q,77.5,15
+Direxion Daily NYSE FANG+ Bull 2X Shares,FNGG,2,2021.09.29,NYSE FANG+ TR USD,100.9,15
+"Direxion Daily Robotics, Artificial Intelligence & Automation Index Bull 2X Shares",UBOT,2,2018.04.19,Indxx Global Robotics & AI Thematic USD,25.8,7
+Direxion Daily S&P Oil & Gas Exp. & Prod. Bull 2X Shares,GUSH,2,2015.05.28,S&P Oil&Gas Explor&Pro Sel Indust TR USD,354.6,64
+"Direxion Daily S&P Oil & Gas Exp. & Prod. Bear 2X Shares",DRIP,-2,2015.05.28,S&P Oil&Gas Explor&Pro Sel Indust TR USD,36.1,8
+Direxion Daily Travel & Vacation Bull 2X Shares,OOTO,2,2021.06.10,BlueStar Tvl and Vacation USD,6.4,54
+Direxion Daily Uranium Industry Bull 2X Shares,URAA,2,2024.06.25,Solactive Gbl Uranium&Nclr Cmpnts TR USD,6.4,7

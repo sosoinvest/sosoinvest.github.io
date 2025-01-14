@@ -4,7 +4,7 @@ import my_colors
 from scipy.special import comb
 
 
-def prob(h,t,r):
+def prob(h, t, r):
     return comb(h+t,h)*r**h*(1-r)**t
 
 

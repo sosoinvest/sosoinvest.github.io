@@ -1,5 +1,6 @@
 #BLOCK: Import modules
 import numpy as np
+import pandas as pd
 from utils import intraday_generator
 from matplotlib import pyplot as plt
 from tabulate import tabulate
@@ -299,6 +300,8 @@ class VolBrkOut_intraday(Strategy):
     day_index = 0
     buy_sign = 0
     positions = []
+    position_history = []
+    position_number = 0
 
     day_index_init = 1
     money_init = sum(self.account.data["Total"])
@@ -356,6 +359,8 @@ class VolBrkOut_intraday(Strategy):
                                     fee=self.fee,
                                     tax=self.tax,
                                     slippage=self.slippage)
+            position.day_exit = today
+            position.price_exit = open_t
             del positions[position_ind]
             buy_sign=0
           position_ind += 1
@@ -387,13 +392,15 @@ class VolBrkOut_intraday(Strategy):
               amount_to_buy = np.floor(0.5*cash/price*100)/100 if cash > 0 else 0
 
               if amount_to_buy > 1:
-                new_position = Position(today,
+                position_number += 1
+                new_position = Position(position_number, today,
                                         price,
                                         amount_to_buy,
                                         high,
                                         price*(1-self.losscut),
                                         self.account)
                 positions.append(new_position)
+                position_history.append(new_position)
 
                 self.buy_operation(price=price, size=0.5)
                 buy_sign = 1
@@ -407,6 +414,8 @@ class VolBrkOut_intraday(Strategy):
                                      fee = self.fee,
                                      tax = self.tax,
                                      slippage = self.slippage)
+              position.day_exit = today
+              position.price_exit = price
               del positions[position_ind]
 
             elif position.day != today and (price-position.price)/position.price>0.2:
@@ -416,6 +425,8 @@ class VolBrkOut_intraday(Strategy):
                                       fee=self.fee,
                                       tax=self.tax,
                                       slippage=self.slippage)
+              position.price_exit = price
+              position.day_exit = today
               del positions[position_ind]
 
               # elif position.day == today:
@@ -440,13 +451,42 @@ class VolBrkOut_intraday(Strategy):
                                   tax=self.tax,
                                   slippage=self.slippage)
     # self.logger.print_in_dataframe()
+    df = self.position_to_dataframe(position_history)
 
+    number_of_win = sum(np.array(df["Return"]) > 0)
+    number_of_trade = sum(np.array(df["Return"]) > 0) + sum(np.array(df["Return"]) < 0)
+    print(number_of_win/number_of_trade)
+    input("")
+
+
+    df.to_csv(f"Positions_{self.tikr}_Vol_Brk_Out_K={self.K}.csv", index=False)
     self.logger.save_data(filename=f"Backtest_Result_{self.tikr}_Vol_Brk_Out_K={self.K}.csv")
     self.analyzer.filename = f"Backtest_Result_{self.tikr}_Vol_Brk_Out_K={self.K}.csv"
     self.analyzer.report()
 
     if self.does_save:
       self.analyzer.save_report()
+
+  def position_to_dataframe(self, position_history):
+    df = {
+      "Number": [],
+      "Day(in)": [],
+      "Day(out)": [],
+      "Price(in)": [],
+      "Price(out)": [],
+      "Amount": [],
+      "Return": [],
+    }
+    for position in position_history:
+      df["Number"].append(position.number)
+      df["Day(in)"].append(position.day)
+      df["Day(out)"].append(position.day_exit)
+      df["Price(in)"].append(position.price)
+      df["Price(out)"].append(position.price_exit)
+      df["Amount"].append(position.size)
+      df["Return"].append((position.price_exit-position.price)/position.price*100)
+    df = pd.DataFrame(df)
+    return df
 
   def buy_operation(self, price, size):
     cash = self.account.data["Total"][0]
@@ -472,13 +512,16 @@ class VolBrkOut_intraday(Strategy):
                               slippage=self.slippage)
 
 class Position:
-  def __init__(self, day, price, size, high, losscut, account):
+  def __init__(self, number, day, price, size, high, losscut, account):
+    self.number = number
     self.day = day
     self.price = price
     self.size = size
     self.high = high
     self.losscut = losscut
     self.account = account
+    self.price_exit = 0
+    self.day_exit = 0
 
   def sell(self, price):
     self.account.sell_asset(tikr=self.tikr,
