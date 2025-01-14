@@ -7,8 +7,8 @@ tag: [주식]
 toc: true
 author_profile: false
 header:
- teaser: /images/2025-01-05-direxion-leveraged-etfs/theme-etfs.webp
- og_image: /images/2025-01-05-direxion-leveraged-etfs/theme-etfs.webp
+ teaser: /images/2025-01-05-direxion-leveraged-etfs/table.webp
+ og_image: /images/2025-01-05-direxion-leveraged-etfs/table.webp
 # sidebar:
 #     nav: "docs"
 # search: true
@@ -25,14 +25,14 @@ header:
 
 3. 이익에 대한 세금이 원천징수 되지 않아서 1년간 복리 효과를 누릴 수 있다. 매매 차익에 대해서는 250만원 공제 후 초과분에 대해 양도세 22%가 부과된다. 반면에 국장 레버리지 ETF는 양도차익에 배당소득세 15.4%가 부과된다. 이 세금은 원천징수되어서 거래 할 때 마다 떼인다.
 
-미장에서 레버리지 ETF를 판매하는 회사는 크게 Direxion, ProShares, MicroSectors, GraniteShares 네개가 있다. ProShares는 TQQQ로 유명하고, Direxion은 SOXL, MicroSectors는 FNGU, NVDA의 2배를 추종하는 NVDL로 유명하다.
+미장에서 레버리지 ETF를 판매하는 회사는 크게 [Direxion](https://www.direxion.com/leveraged-and-inverse-etfs), [ProShares](https://www.proshares.com/strategies/leveraged-and-inverse), [MicroSectors](https://microsectors.com/), [GraniteShares](https://graniteshares.com/institutional/us/en-us/) 네개가 있다. ProShares는 [TQQQ](https://finance.yahoo.com/quote/TQQQ/)로 유명하고, Direxion은 [SOXL](https://finance.yahoo.com/quote/SOXL/), MicroSectors는 [FNGU](https://finance.yahoo.com/quote/FNGU/), [NVDL](https://finance.yahoo.com/quote/NVDL/)(NVDA 2배)로 유명하다.
 
 이중 가장 많은 레버리지/인버스 ETF를 판매하는 회사는 Direxion이다. 92개의 레버리지, 인버스 ETF 들을 상장해서 운용하고있다.
 
 다음은 Direxion의 레버리지/인버스 ETF 들을 정리한 표들이다. 카테고리 별로 별도의 표로 정리했다. 
 
 
-*표 1: Direxion 레버리지/인버스  ETF 리스트 (Single stock ETFs)*
+*표 1: Direxion 레버리지/인버스  ETF 리스트 (개별주, Single stock ETFs)*
 
 |#| 티커 | 종목 | 기초지수| 배율 | 상장일 |시가총액 (M$)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -63,7 +63,7 @@ header:
 |25|TSMX|Direxion Daily TSM Bull 2X Shares|TSM|2.0|2024.10.02|86.3|
 |26|TSMZ|Direxion Daily TSM Bear 1X Shares|TSM|-1.0|2024.10.02|2.6|
 
-*표 2: Direxion 레버리지/인버스  ETF 리스트 (Fixed income x3)*
+*표 2: Direxion 레버리지/인버스  ETF 리스트 (채권 3배, Fixed income x3)*
 
 |#| 티커 | 종목 | 기초지수| 배율 | 상장일 |시가총액 (M$)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -73,7 +73,7 @@ header:
 |4|TYO|Direxion Daily 7-10 Year Treasury Bear 3X Shares|ICE U.S. Treasury 7-10 Year Bond TR USD|-3.0|2009.04.16|17.2|
 
 
-*표 3: Direxion 레버리지/인버스  ETF 리스트 (International equity x3)*
+*표 3: Direxion 레버리지/인버스  ETF 리스트 (국제 3배, International equity x3)*
 |#| 티커 | 종목 | 기초지수| 배율 | 상장일 |시가총액 (M$)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|YINN|Direxion Daily FTSE China Bull 3X Shares|FTSE China 50 NR USD|3.0|2009.12.03|1337.2|
@@ -85,7 +85,7 @@ header:
 |7|KORU|Direxion Daily MSCI South Korea Bull 3X Shares|MSCI Korea 25-50 NR USD|3.0|2013.04.10|103.3|
 
 
-*표 4: Direxion 레버리지/인버스  ETF 리스트 (Market cap)*
+*표 4: Direxion 레버리지/인버스  ETF 리스트 (시가총액, Market cap)*
 |#| 티커 | 종목 | 기초지수| 배율 | 상장일 |시가총액 (M$)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|MIDU|Direxion Daily Mid Cap Bull 3X Shares|S&P MidCap 400 TR|3.0|2009.01.08|94.7|
@@ -95,7 +95,7 @@ header:
 |5|TZA|Direxion Daily Small Cap Bear 3X Shares|Russell 2000 TR USD|-3.0|2008.11.05|289.2|
 
 
-*표 5: Direxion 레버리지/인버스  ETF 리스트 (Sector equity x3)*
+*표 5: Direxion 레버리지/인버스  ETF 리스트 (섹터 3배, Sector equity x3)*
 |#| 티커 | 종목 | 기초지수| 배율 | 상장일 |시가총액 (M$)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|DFEN|Direxion Daily Aerospace & Defense Bull 3X Shares|DJ US Select Aerospace&Defense TR USD|3.0|2017.05.03|167.3|
@@ -124,7 +124,7 @@ header:
 |24|UTSL|Direxion Daily Utilities Bull 3X Shares|S&P Utilities Select Sector TR USD|3.0|2017.05.03|44.3|
 
 
-*표 6: Direxion 레버리지/인버스  ETF 리스트 (International equity x2)*
+*표 6: Direxion 레버리지/인버스  ETF 리스트 (국제 2배, International equity x2)*
 |#| 티커 | 종목 | 기초지수| 배율 | 상장일 |시가총액 (M$)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|CHAU|Direxion Daily CSI 300 China A Share Bull 2X Shares|CSI 300 NR USD|2.0|2015.04.16|292.9|
@@ -134,7 +134,7 @@ header:
 |5|INDL|Direxion Daily MSCI India Bull 2X Shares|MSCI India NR USD|2.0|2010.03.11|74.2|
 
 
-*표 7: Direxion 레버리지/인버스  ETF 리스트 (Sector equity x2)*
+*표 7: Direxion 레버리지/인버스  ETF 리스트 (섹터 2배, Sector equity x2)*
 |#| 티커 | 종목 | 기초지수| 배율 | 상장일 |시가총액 (M$)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|AIBU|Direxion Daily AI and Big Data Bull 2X Shares|Solactive US AI & Big Data USD|2.0|2024.05.15|10.9|
