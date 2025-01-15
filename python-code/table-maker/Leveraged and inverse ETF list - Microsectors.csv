@@ -1,0 +1,25 @@
+종목명,티커,배율,상장일,기초지수,시가총액,구성종목수,비고
+Gold,,,,,,,
+"
+MicroSectors Gold 3X Leveraged ETN",SHNY,3,2023.02.21,,21.5,1,금
+MicroSectors Gold -3X Inverse Leveraged ETN,DULL,-3,2023.02.21,,1.3,1,금
+Energy,,,,,,,
+MicroSectors Energy 3X Leveraged Notes,WTIU,3,2023.02.16,Solative MicroSectors Energy USD,20.2,12,에너지
+MicroSectors Energy 3X Inverse Leveraged Notes,WTID,-3,2023.02.16,Solative MicroSectors Energy USD,2.8,12,에너지
+Travel,,,,,,,
+"MicroSectors Travel 3X Leveraged ETN
+",FLYU,3,2022.06.22,MerQube MicroSectors US Travel NR USD,9,31,여행
+MicroSectors Travel 3X Inverse Leveraged ETN,FLYD,-3,2022.06.22,,1.3,31,여행
+Oil & Gas Exploration & Production,,,,,,,
+MicroSectorsTM Oil & Gas Exploration & Production 3X Leveraged ETN,OILU,3,2021.11.08,Solactive MicroSectors O&G Ex&Pro TR USD,48.6,25,원유
+MicroSectorsTM Oil & Gas Exploration & Production -3X Inverse Leveraged ETN,OILD,-3,2021.11.08,Solactive MicroSectors O&G Ex&Pro TR USD,14.8,25,원유
+FANG & Innovation,,,,,,,
+MicroSectors Solactive FANG Innovation 3X Leveraged ETN,BULZ,3,2021.08.17,Solactive FANG Innovation TR USD,1267.7,15,기술
+MicroSectors Solactive FANG & Innovation -3X Inverse Leveraged ETN,BERZ,-3,2021.08.17,Solactive FANG Innovation TR USD,10,15,기술
+Gold Miners,,,,,,,
+MicroSectors Gold Miners 3X Leveraged ETN,GDXU,3,2020.12.02,S-Network MicroSectors Gold Min TR USD,256.7,2,금광
+MicroSectors Gold Miners -3X Inverse Leveraged ETN,GDXD,-3,2020.12.02,S-Network MicroSectors Gold Min TR USD,59.9,2,금광
+FANG+,,,,,,,
+MicroSectors FANG+ Index 3X Leveraged ETN,FNGU,3,2018.01.22,NYSE FANG+ TR USD,7157.8,10,FANG
+MicroSectors FANG+ Index 2X Leveraged ETN,FNGO,2,2018.08.01,NYSE FANG+ TR USD,443.3,10,FANG
+MicroSectors FANG+ Index -3X Inverse Leveraged ETN,FNGD,-3,2018.01.22,NYSE FANG+ TR USD,172.2,10,FANG

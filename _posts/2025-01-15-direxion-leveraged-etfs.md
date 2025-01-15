@@ -1,14 +1,14 @@
 ---
 layout: single
-title:  "미장 레버리지&인버스 ETF 정리 (Direxion, 디렉시온)"
+title:  "[종목정보] 미장 레버리지&인버스 ETF 정리 (Direxion, 디렉시온)"
 description: 미장 레버리지/인버스 EF
 categories: 투자
 tag: [주식]
 toc: true
 author_profile: false
 header:
- teaser: /images/2025-01-05-direxion-leveraged-etfs/table.webp
- og_image: /images/2025-01-05-direxion-leveraged-etfs/table.webp
+ teaser: /images/2025-01-15-direxion-leveraged-etfs/table.webp
+ og_image: /images/2025-01-15-direxion-leveraged-etfs/table.webp
 # sidebar:
 #     nav: "docs"
 # search: true
