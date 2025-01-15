@@ -72,8 +72,8 @@ header:
 |23|TYD|Direxion Daily 7-10 Year Treasury Bull 3X Shares|ICE U.S. Treasury 7-10 Year Bond TR USD|3.0|2009.04.16|46|
 |4|TYO|Direxion Daily 7-10 Year Treasury Bear 3X Shares|ICE U.S. Treasury 7-10 Year Bond TR USD|-3.0|2009.04.16|17.2|
 
-
 *표 3: Direxion 레버리지/인버스  ETF 리스트 (국제 3배, International equity x3)*
+
 |#| 티커 | 종목 | 기초지수| 배율 | 상장일 |시가총액 (M$)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|YINN|Direxion Daily FTSE China Bull 3X Shares|FTSE China 50 NR USD|3.0|2009.12.03|1337.2|
@@ -84,8 +84,8 @@ header:
 |6|MEXX|Direxion Daily MSCI Mexico Bull 3X Shares|MSCI Mexico IMI 25-50 NR USD|3.0|2017.05.03|17.4|
 |7|KORU|Direxion Daily MSCI South Korea Bull 3X Shares|MSCI Korea 25-50 NR USD|3.0|2013.04.10|103.3|
 
-
 *표 4: Direxion 레버리지/인버스  ETF 리스트 (시가총액, Market cap)*
+
 |#| 티커 | 종목 | 기초지수| 배율 | 상장일 |시가총액 (M$)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|MIDU|Direxion Daily Mid Cap Bull 3X Shares|S&P MidCap 400 TR|3.0|2009.01.08|94.7|
@@ -94,8 +94,8 @@ header:
 |4|TNA|Direxion Daily Small Cap Bull 3X Shares|Russell 2000 TR USD|3.0|2008.11.05|2349.3|
 |5|TZA|Direxion Daily Small Cap Bear 3X Shares|Russell 2000 TR USD|-3.0|2008.11.05|289.2|
 
-
 *표 5: Direxion 레버리지/인버스  ETF 리스트 (섹터 3배, Sector equity x3)*
+
 |#| 티커 | 종목 | 기초지수| 배율 | 상장일 |시가총액 (M$)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|DFEN|Direxion Daily Aerospace & Defense Bull 3X Shares|DJ US Select Aerospace&Defense TR USD|3.0|2017.05.03|167.3|
@@ -123,8 +123,8 @@ header:
 |23|TPOR|Direxion Daily Transportation Bull 3X Shares|S&P Transpt Sel Ind FMC Cap TR USD|3.0|2017.05.03|18.7|
 |24|UTSL|Direxion Daily Utilities Bull 3X Shares|S&P Utilities Select Sector TR USD|3.0|2017.05.03|44.3|
 
-
 *표 6: Direxion 레버리지/인버스  ETF 리스트 (국제 2배, International equity x2)*
+
 |#| 티커 | 종목 | 기초지수| 배율 | 상장일 |시가총액 (M$)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|CHAU|Direxion Daily CSI 300 China A Share Bull 2X Shares|CSI 300 NR USD|2.0|2015.04.16|292.9|
@@ -133,8 +133,8 @@ header:
 |4|XXCH|Direxion Daily MSCI Emerging Markets ex China Bull 2X Shares |MSCI Emerging Markets ex China NR USD|2.0|2024.02.07|3.2|
 |5|INDL|Direxion Daily MSCI India Bull 2X Shares|MSCI India NR USD|2.0|2010.03.11|74.2|
 
-
 *표 7: Direxion 레버리지/인버스  ETF 리스트 (섹터 2배, Sector equity x2)*
+
 |#| 티커 | 종목 | 기초지수| 배율 | 상장일 |시가총액 (M$)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1|AIBU|Direxion Daily AI and Big Data Bull 2X Shares|Solactive US AI & Big Data USD|2.0|2024.05.15|10.9|
