@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "퇴직금 vs 퇴직연금"
+title:  "[퇴직연금] 퇴직금 vs 퇴직연금"
 description: 퇴직금과 퇴직연금 중 더 유리한 것은 무엇일까
 categories: 투자
 tag: [퇴직연금]

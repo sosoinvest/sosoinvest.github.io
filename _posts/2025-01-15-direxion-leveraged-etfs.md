@@ -155,3 +155,5 @@ header:
 |16|DRIP|Direxion Daily S&P Oil & Gas Exp. & Prod. Bear 2X Shares|S&P Oil&Gas Explor&Pro Sel Indust TR USD|-2.0|2015.05.28|36.1|
 |17|OOTO|Direxion Daily Travel & Vacation Bull 2X Shares|BlueStar Tvl and Vacation USD|2.0|2021.06.10|6.4|
 |18|URAA|Direxion Daily Uranium Industry Bull 2X Shares|Solactive Gbl Uranium&Nclr Cmpnts TR USD|2.0|2024.06.25|6.4|
+
+- [국장 테마 ETF 모음](/투자/korea-theme-etfs)
