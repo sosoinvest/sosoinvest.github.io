@@ -10,6 +10,7 @@ class Backtester:
                deposit_cash=10000,
                strategy="VolBrkOut", params= {"K": 0.5}, window=1):
 
+    # BLOCK: Set parameters
     self.params = params
     self.strategy = strategy
     self.does_save = does_save
@@ -27,10 +28,19 @@ class Backtester:
 
     self.account.deposit_cash(deposit_cash)
 
-    self.df = pd.read_json(filename)
+    # BLOCK: Get dataframe
+    if strategy != "VolBrkOut_multi":
+      file_extension = filename[-3:]
 
-    if strategy == "VolBrkOut":
-      self.strategy = trading_strategy.VolBrkOut_(df=self.df,
+      if file_extension == "json":
+        self.df = pd.read_json(filename)
+
+      elif file_extension == "csv":
+        self.df = pd.read_csv(filename)
+
+    # BLOCK: Set strategy
+    if strategy == "VolBrkOut_ohlc":
+      self.strategy = trading_strategy.VolBrkOut_ohlc(df=self.df,
                                                  account=self.account, logger=self.logger, analyzer=self.analyzer,
                                                  fee=self.fee, tax=self.tax, slippage=self.slippage,
                                                  leverage=self.leverage, losscut=self.losscut,
@@ -45,5 +55,22 @@ class Backtester:
                                                   does_save=self.does_save,
                                                   tikr=self.tikr,
                                                   K=params["K"])
+    elif strategy == "VolBrkOut_ohlc_multi":
+      self.df = {
+
+      }
+      for tikr in self.tikr:
+        self.df[tikr] = pd.read_csv(f"{tikr}.csv")
+
+      self.strategy = trading_strategy.VolBrkOut_ohlc_multi(df=self.df,
+                                                          account=self.account, logger=self.logger,
+                                                          analyzer=self.analyzer,
+                                                          fee=self.fee, tax=self.tax, slippage=self.slippage,
+                                                          leverage=self.leverage, losscut=self.losscut,
+                                                          does_save=self.does_save,
+                                                          tikr=self.tikr,
+                                                          K=params["K"])
+
+  # BLOCK: Run the test
   def run(self):
     self.strategy.run()

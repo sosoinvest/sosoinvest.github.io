@@ -6,33 +6,51 @@ from matplotlib.ticker import MaxNLocator
 plt.rcParams["font.family"] = "Malgun Gothic"
 plt.rcParams["axes.unicode_minus"] = False
 
-K = 1.
-TIKR = "merged_LABD"
+K = 0.5
+TIKR = "466920"
 
+# BLOCK: Intraday
+# does_save = False
+# my_tester = tester100.Backtester(filename=f"E:/intraday-data/{TIKR}.json",
+#                                  tikr=TIKR,
+#                                  does_save=does_save,
+#                                  fee=0.07*0.01, tax=0.0, slippage=0.0*0.01, leverage=1,
+#                                  losscut=5*0.01,
+#                                  deposit_cash=10000,
+#                                  strategy="VolBrkOut_intraday",
+#                                  params={"K": K},
+#                                  window=1)
+# my_tester.run()
+
+# BLOCK: VBO OHLC
+# does_save = False
+# my_tester = tester100.Backtester(filename=f"{TIKR}.csv", #f"E:/{TIKR}.csv",
+#                                  tikr=TIKR,
+#                                  does_save=does_save,
+#                                  fee=0.0036396*0.01, tax=15.4*0.0, slippage=0.0*0.01, leverage=1,
+#                                  losscut=5*0.01,
+#                                  deposit_cash=10000,
+#                                  strategy="VolBrkOut_ohlc",
+#                                  params={"K": K},
+#                                  window=1)
+# my_tester.run()
+
+# # BLOCK: VBO Multi
 does_save = False
-my_tester = tester100.Backtester(filename=f"E:/intraday-data/{TIKR}.json",
-                                 tikr=TIKR,
+tikr_list = ["117460", "091160", "091180", "266360", "305720", "466920", "244580" ,"449450", "143860"]
+
+my_tester = tester100.Backtester(filename=f"",
+                                 tikr=tikr_list,
                                  does_save=does_save,
-                                 fee=0.07*0.01, tax=0.0, slippage=0.0*0.01, leverage=1,
+                                 fee=0.0036396*0.01, tax=15.4*0.0, slippage=0.0*0.01, leverage=1,
                                  losscut=5*0.01,
                                  deposit_cash=10000,
-                                 strategy="VolBrkOut_intraday",
+                                 strategy="VolBrkOut_ohlc_multi",
                                  params={"K": K},
                                  window=1)
 my_tester.run()
 
-# my_tester = tester100.Backtester(filename=f"data/{TIKR}.csv",
-#                                  tikr=TIKR,
-#                                  does_save=does_save,
-#                                  fee=0.15*0.01, tax=0.0, slippage=0*0.01, leverage=1,
-#                                  losscut=3*0.01,
-#                                  deposit_cash=10000,
-#                                  strategy="VolBrkOut_intraday",
-#                                  params={"K": K,
-#                                          "file_for_intra_day_patterns":f"utils/intraday_data/{TIKR}_2024-10-19_2024-12-18_interval=2m.csv"},
-#                                  window=1)
-# my_tester.run()
-
+# BLOCK: Plot the result
 # filename = f"Backtest_Result_{TIKR}_Vol_Brk_Out_K={K}.csv"
 # df = pd.read_csv(filename)
 #
@@ -54,7 +72,7 @@ my_tester.run()
 # ax.set_ylabel("Return [%]",
 #               fontsize=14, color="black", fontname="Times New Roman")
 # plt.legend()
-# ax.set_yscale("log")
+# ax.set_yscale("linear")
 # ax.xaxis.set_major_locator(MaxNLocator(integer=True))
 # plt.xticks(fontname="Times New Roman", fontsize=12, rotation=15)
 # plt.yticks(fontname="Times New Roman", fontsize=12)

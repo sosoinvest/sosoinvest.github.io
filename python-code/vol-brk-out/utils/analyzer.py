@@ -120,11 +120,12 @@ class Analyzer:
     :return:
     """
     cagr = 1
-    print(self.daily_return)
+    # print(self.daily_return)
     for daily_return in self.daily_return:
       cagr *= (daily_return * 0.01 + 1)
     cagr = cagr ** (1 / len(self.daily_return)) - 1  # The geometric mean return of the daily return
-    cagr = (1 + cagr) ** 252 - 1
+    # cagr = (1 + cagr) ** 252 - 1
+    cagr = (1 + cagr) ** 250 - 1
     cagr = np.round(cagr * 100, 2)
     self.analysis_result["CAGR"] = [f"{cagr} %"]
 
