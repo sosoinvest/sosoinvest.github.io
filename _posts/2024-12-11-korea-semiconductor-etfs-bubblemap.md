@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[종목정보] 국장 최고의 반도체 ETF"
+title:  "[종목정보] 국장 최고의 반도체 ETF (3)"
 description: 국장 반도체 ETF들의 성과를 한눈에 보기위한 시각화 페이지
 categories: 투자
 tag: [주식]

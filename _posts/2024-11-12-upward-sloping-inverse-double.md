@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "곱버스를 우상향시키는 방법"
+title:  "[투자전략] 곱버스를 우상향시키는 방법 (7)"
 description: 곱버스를 우상향시킬 수 있는 변동성 돌파전략 매매법을 정리한 글
 categories: 투자
 tag: [주식,퀀트,백테스트,파이썬]

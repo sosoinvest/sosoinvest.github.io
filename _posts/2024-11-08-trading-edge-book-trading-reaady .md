@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "실전 추세투자법(5/6): 트레이딩 준비"
+title:  "[서평] 실전 추세투자법(5/6): 트레이딩 준비 (18)"
 description: 실전 추세투자법 책의 트레이딩 준비 부분을 정리한 글
 categories: 투자
 tag: [주식,퀀트,책]

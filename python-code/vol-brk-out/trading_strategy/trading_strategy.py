@@ -1,7 +1,7 @@
 #BLOCK: Import modules
 import numpy as np
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 from utils import intraday_generator
 from matplotlib import pyplot as plt
 from tabulate import tabulate
@@ -91,18 +91,26 @@ class VolBrkOut_ohlc(Strategy):
 
       else:
         today = self.df["Date"][day_index][0:10]
-
+        print(today)
+        print(sum(self.account.data["Total"]))
         (open_y, high_y, low_y, close_y) = self.get_price(ind=day_index - 1, normal_factor=normal_factor)
         (open_t, high_t, low_t, close_t) = self.get_price(ind=day_index, normal_factor=normal_factor)
 
         # BLOCK: Sell operation
+
         if buy_sign:
-          buy_sign = self.sell_operation(open_t=open_t)
+          days_passed = day_index - bought_day_index
+          print(days_passed)
+          if open_t > self.account.data["Price(bought)"][1] or days_passed > 0:
+            buy_sign = self.sell_operation(open_t=open_t)
 
-        noise = (close_y-open_y)/(high_y-low_y)
+        if buy_sign != 1:
+          noise = (close_y-open_y)/(high_y-low_y)
 
-        if noise>0.:
-          buy_sign  = self.buy_operation(high_y=high_y, low_y=low_y, high_t=high_t, open_t=open_t)
+          if noise>0. or True:
+            buy_sign  = self.buy_operation(high_y=high_y, low_y=low_y, high_t=high_t, open_t=open_t)
+            if buy_sign:
+              bought_day_index = day_index
 
 
         # BLOCK: Logging the trading data
@@ -149,16 +157,15 @@ class VolBrkOut_ohlc(Strategy):
       # print(f"Buy sign occurs at {day_index}")
       cash = self.account.data["Total"][0]
       size_to_buy = 1
-      amount_to_buy = np.floor(size_to_buy * cash / target_price * 100)/100
+      amount_to_buy = np.floor(size_to_buy * cash / target_price * 100)/100 if cash > 0 else 0
 
-      if amount_to_buy > 1:
-        self.account.buy_asset(tikr=self.tikr,
-                               amount=amount_to_buy,
-                               price_buy=target_price,
-                               fee=self.fee,
-                               tax=self.tax,
-                               slippage=self.slippage,
-                               leverage=self.leverage)
+      self.account.buy_asset(tikr=self.tikr,
+                             amount=amount_to_buy,
+                             price_buy=target_price,
+                             fee=self.fee,
+                             tax=self.tax,
+                             slippage=self.slippage,
+                             leverage=self.leverage)
     return buy_sign
 
 # BLOCK: VBO OHLC Intraday
@@ -544,8 +551,7 @@ class VolBrkOut_ohlc_multi(Strategy):
         # BLOCK: Buy operation
         (open_y, high_y, low_y, close_y,
          open_t, high_t, low_t, close_t) = self.get_price_multi(self.df[tikr_new], today)
-
-        noise = (close_y-open_y)/(high_y-low_y)
+        noise = int(close_y-open_y)/int(high_y-low_y) if int(high_y-low_y)!=0 else 0
 
         if noise>0. or True:
           buy_sign  = self.buy_operation(high_y=high_y, low_y=low_y, high_t=high_t, open_t=open_t)
@@ -562,7 +568,7 @@ class VolBrkOut_ohlc_multi(Strategy):
                 (open_y, high_y, low_y, close_y,
                  open_t, high_t, low_t, close_t) = self.get_price_multi(self.df[tikr_new], today)
 
-                noise = (close_y - open_y) / (high_y - low_y)
+                noise = int(close_y-open_y)/int(high_y-low_y) if int(high_y-low_y)!=0 else 0
 
                 if noise > 0. or True:
                   buy_sign = self.buy_operation(high_y=high_y, low_y=low_y, high_t=high_t, open_t=open_t)
@@ -614,8 +620,8 @@ class VolBrkOut_ohlc_multi(Strategy):
     if buy_sign:
       # print(f"Buy sign occurs at {day_index}")
       cash = self.account.data["Total"][0]
-      size_to_buy = 1
-      amount_to_buy = np.floor(size_to_buy * cash / target_price * 100)/100
+      size_to_buy = 1.0
+      amount_to_buy = np.floor(size_to_buy * cash / target_price * 100)/100 if cash > 0 else 0
 
       if amount_to_buy > 1 or True:
         self.account.buy_asset(tikr=self.tikr,

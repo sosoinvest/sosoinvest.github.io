@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[종목정보] 미장 레버리지&인버스 ETF 정리 (Microsectors, 마이크로섹터스)"
+title:  "[종목정보] 미장 레버리지&인버스 ETF 정리 (Microsectors, 마이크로섹터스) (5)"
 description: 미장 레버리지/인버스 EF
 categories: 투자
 tag: [주식]

@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "퀀트의 필수 요소 (2/7): 금융시장"
+title:  "[서평] 퀀트의 필수 요소 (2/7): 금융시장 (5)"
 description: 퀀트 투자에 필요한 요소인 금융시장에 대하여 정리하였다.
 categories: 투자
 tag: [주식,책,퀀트]

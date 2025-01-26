@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "국장에서 단타치기 가장 좋은 섹터"
+title:  "[투자전략] 국장에서 단타치기 가장 좋은 섹터 (8)"
 description: 국장 섹터 ETF를 단타해서 성공할 수 있는 변동성 돌파전략 결과를 정리한 글
 categories: 투자
 tag: [주식,퀀트,백테스트,파이썬]

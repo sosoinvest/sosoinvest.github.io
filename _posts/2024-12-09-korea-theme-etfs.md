@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[종목정보] 국장 테마 ETF 모음"
+title:  "[종목정보] 국장 테마 ETF 모음 (1)"
 description: 국장 테마 ETF를 모두 모은 자료 페이지
 categories: 투자
 tag: [주식]

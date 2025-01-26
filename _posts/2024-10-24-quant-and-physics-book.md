@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "퀀트: 물리와 금융에 대한 회고"
+title:  "[서평] 퀀트: 물리와 금융에 대한 회고 (12)"
 description: 이매뉴얼 더만의 자서전과 함께 퀀트에 대해 정리한 글
 categories: 투자
 tag: [주식,퀀트,책]

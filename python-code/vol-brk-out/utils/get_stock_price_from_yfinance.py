@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 def get_data_from_yfinance(TIKR, start, end):
   interval = "1d"
   ticker = yf.Ticker(TIKR)
+
   price_data = ticker.history(start=start, end=end, period="1d", interval=interval)
   print(price_data)
   does_save = True
@@ -20,4 +21,4 @@ def get_data_from_yfinance(TIKR, start, end):
 start = datetime(1985, 1, 1)
 end = datetime.today()
 
-get_data_from_yfinance(TIKR="143860.KS", start=start, end=end)
+get_data_from_yfinance(TIKR="091170.KS", start=start, end=end)

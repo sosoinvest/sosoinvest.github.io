@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "퀀트 백테스팅 파이썬 코드"
+title:  "[투자전략] 퀀트 백테스팅 파이썬 코드 (9)"
 description: 파이썬으로 작성한 퀀트 투자용 백테스팅 코드
 categories: 투자
 tag: [주식,퀀트,백테스트,파이썬]
