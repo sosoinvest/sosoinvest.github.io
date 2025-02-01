@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[서평] 실전 추세투자법(6/6): MACD기반 진입규칙 (20)"
+title:  "[서평-21] 실전 추세투자법(6/6): MACD기반 진입규칙"
 description: 실전 추세투자법 책의 MACD기반 진입규칙 부분을 정리한 글
 categories: 투자
 tag: [주식,퀀트,책]

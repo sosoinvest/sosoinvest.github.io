@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[종목정보] 미장 레버리지&인버스 ETF 정리 (Direxion, 디렉시온) (5)"
+title:  "[종목정보-5] 미장 레버리지&인버스 ETF 정리 (Direxion, 디렉시온)"
 description: 미장 레버리지/인버스 EF
 categories: 투자
 tag: [주식]

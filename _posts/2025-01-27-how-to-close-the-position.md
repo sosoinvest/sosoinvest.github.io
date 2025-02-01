@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[투자전략] 가장 깔끔한 포지션 청산 기법 (13)"
+title:  "[투자전략-13] 가장 깔끔한 포지션 청산 기법"
 description: 매수 또는 매도 포지션을 청산하는 가장 깔끔한 기법
 categories: 투자
 tag: [주식, 퀀트]

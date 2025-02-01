@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[투자정보] 나스닥 100 ETF 레버리지를 얼마나 땡겨야 안전한가 (3)"
+title:  "[투자정보-3] 나스닥 100 ETF 레버리지를 얼마나 땡겨야 안전한가"
 description: 나스닥 100 ETF 레버리지 비율에 따른 성과 분석 
 categories: 투자
 tag: [주식]

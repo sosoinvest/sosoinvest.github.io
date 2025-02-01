@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[투자전략] 기본적 분석이 의미없는 이유 (6)"
+title:  "[투자전략-6] 기본적 분석이 의미없는 이유"
 description: 투자에 있어서 기본적 분석의 문제점을 정리한 글
 categories: 투자
 tag: [주식,퀀트,책]

@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[종목정보] 국장 조선 ETF 수익률 TOP4 (2)"
+title:  "[종목정보-2] 국장 조선 ETF 수익률 TOP4"
 description: 국장 조선 ETF들의 성과를 한눈에 보기위한 시각화 페이지
 categories: 투자
 tag: [주식]

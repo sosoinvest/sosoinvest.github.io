@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "[투자전략] 국장 섹터 ETF 실시간 변동성 돌파 모니터 (11)"
+title:  "[투자전략-11] 국장 섹터 ETF 실시간 변동성 돌파 모니터"
 description: 국장 섹터 ETF의 변동성 돌파 신호 모니터링 페이지
 categories: 투자
 tag: [주식,퀀트]
