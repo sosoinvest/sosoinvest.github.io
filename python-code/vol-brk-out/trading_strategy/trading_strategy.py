@@ -74,7 +74,8 @@ class VolBrkOut_ohlc(Strategy):
 
   def check_buy_sign(self, high_y, low_y, high_t, open_t, K):
     price_width = high_y - low_y
-    target_price = open_t + K*price_width
+    target_price = min(max(open_t + K*price_width, open_t*(1 + 0.25*0.01)), open_t*(1 + 3*0.01))
+    # target_price = open_t + K*price_width
     buy_sign = 1 if high_t > target_price else 0
     return target_price, buy_sign
 
@@ -102,7 +103,8 @@ class VolBrkOut_ohlc(Strategy):
         if buy_sign:
           days_passed = day_index - bought_day_index
           print(days_passed)
-          if open_t > self.account.data["Price(bought)"][1] or days_passed > 0:
+
+          if open_t > self.account.data["Price(bought)"][1] or days_passed > 3:
             buy_sign = self.sell_operation(open_t=open_t)
 
         if buy_sign != 1:
@@ -143,7 +145,6 @@ class VolBrkOut_ohlc(Strategy):
                             fee=self.fee,
                             tax=self.tax,
                             slippage=self.slippage)
-
     return 0
 
   def buy_operation(self,
@@ -436,6 +437,7 @@ class VolBrkOut_ohlc_multi(Strategy):
   def check_buy_sign(self, high_y, low_y, high_t, open_t, K):
     price_width = high_y - low_y
     target_price = open_t + K*price_width
+    # target_price = min(max(open_t + K * price_width, open_t * (1 + 0.25 * 0.01)), open_t * (1 + 3 * 0.01))
     buy_sign = 1 if high_t > target_price else 0
     return target_price, buy_sign
 
