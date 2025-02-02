@@ -6,8 +6,8 @@ from matplotlib.ticker import MaxNLocator
 plt.rcParams["font.family"] = "Malgun Gothic"
 plt.rcParams["axes.unicode_minus"] = False
 
-K = 1.0
-TIKR = "229200"
+K = 0.3
+TIKR = "091160"
 
 # # BLOCK: Intraday
 # does_save = False
@@ -38,19 +38,19 @@ my_tester.run()
 # BLOCK: VBO Multi
 # does_save = False
 # tikr_list = ["117460", "091160", "091180", "266360", "305720", "466920", "244580" ,"449450", "143860", "139260", "228790", "091170"]
-# tikr_list = ["117460", "091160", "091180", "266360", "305720", "466920", "244580" ,"449450", "143860", "228790"]
+tikr_list = ["117460", "091160", "091180", "266360", "305720", "466920", "244580" ,"449450", "143860", "228790"]
 # tikr_list = ["005930", "005380", "012450", "207940", "329180", "373220"]
 
-# my_tester = tester100.Backtester(filename=f"",
-#                                  tikr=tikr_list,
-#                                  does_save=does_save,
-#                                  fee=0.0036396*0.01, tax=0.18*0.0, slippage=0.0*0.01, leverage=1,
-#                                  losscut=5*0.01,
-#                                  deposit_cash=10000,
-#                                  strategy="VolBrkOut_ohlc_multi",
-#                                  params={"K": K},
-#                                  window=1)
-# my_tester.run()
+my_tester = tester100.Backtester(filename=f"",
+                                 tikr=tikr_list,
+                                 does_save=does_save,
+                                 fee=0.0036396*0.01, tax=0.18*0.0, slippage=0.0*0.01, leverage=1,
+                                 losscut=5*0.01,
+                                 deposit_cash=10000,
+                                 strategy="VolBrkOut_ohlc_multi",
+                                 params={"K": K},
+                                 window=1)
+my_tester.run()
 
 # BLOCK: Plot the result
 filename = f"Backtest_Result_{TIKR}_Vol_Brk_Out_K={K}.csv"
@@ -85,5 +85,5 @@ ax.grid(True)
 plt.show()
 
 plt.tight_layout()
-if does_save:
-  plt.savefig(f"{filename}_figure.png", dpi=300)
+# if does_save:
+  # plt.savefig(f"{filename}_figure.png", dpi=300)

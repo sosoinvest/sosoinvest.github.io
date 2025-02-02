@@ -72,10 +72,14 @@ class VolBrkOut_ohlc(Strategy):
                      does_save=does_save, tikr=tikr)
     self.K = K
 
-  def check_buy_sign(self, high_y, low_y, high_t, open_t, K):
-    price_width = high_y - low_y
-    target_price = min(max(open_t + K*price_width, open_t*(1 + 0.25*0.01)), open_t*(1 + 3*0.01))
-    # target_price = open_t + K*price_width
+  def check_buy_sign(self, high_y, low_y, open_y, close_yy, high_t, open_t, K):
+    # price_width = high_y - low_y
+    # price_width = open_y - low_y
+    # price_width = high_y - open_y
+    tr = max(max(high_y-low_y, abs(high_y-close_yy)), abs(low_y-close_yy))
+    price_width = tr
+    # target_price = min(max(open_t + K*price_width, open_t*(1 + 0.25*0.01)), open_t*(1 + 3*0.01))
+    target_price = open_t + K*price_width
     buy_sign = 1 if high_t > target_price else 0
     return target_price, buy_sign
 
@@ -85,6 +89,7 @@ class VolBrkOut_ohlc(Strategy):
     normal_factor = self.df["Open"][0] if not(np.isnan(self.df["Open"][0])) else self.df["Open"][1]
     buy_sign = 0
 
+    day_index += 1
     while not is_end_of_data:
       day_index += 1
 
@@ -95,6 +100,7 @@ class VolBrkOut_ohlc(Strategy):
         today = self.df["Date"][day_index][0:10]
         print(today)
         print(sum(self.account.data["Total"]))
+        (open_yy, high_yy, low_yy, close_yy) = self.get_price(ind=day_index - 2, normal_factor=normal_factor)
         (open_y, high_y, low_y, close_y) = self.get_price(ind=day_index - 1, normal_factor=normal_factor)
         (open_t, high_t, low_t, close_t) = self.get_price(ind=day_index, normal_factor=normal_factor)
 
@@ -104,14 +110,14 @@ class VolBrkOut_ohlc(Strategy):
           days_passed = day_index - bought_day_index
           print(days_passed)
 
-          if open_t > self.account.data["Price(bought)"][1] or days_passed > 3:
+          if open_t > self.account.data["Price(bought)"][1] or days_passed > 0:
             buy_sign = self.sell_operation(open_t=open_t)
 
         if buy_sign != 1:
           noise = (close_y-open_y)/(high_y-low_y)
 
           if noise>0. or True:
-            buy_sign  = self.buy_operation(high_y=high_y, low_y=low_y, high_t=high_t, open_t=open_t)
+            buy_sign  = self.buy_operation(high_y=high_y, low_y=low_y, open_y=open_y, close_yy = close_yy, high_t=high_t, open_t=open_t)
             if buy_sign:
               bought_day_index = day_index
 
@@ -148,10 +154,11 @@ class VolBrkOut_ohlc(Strategy):
     return 0
 
   def buy_operation(self,
-                    high_y, low_y,
+                    high_y, low_y, open_y, close_yy,
                     high_t, open_t):
 
     target_price, buy_sign = self.check_buy_sign(high_y=high_y, low_y=low_y,
+                                                 open_y=open_y, close_yy = close_yy,
                                                  high_t=high_t, open_t=open_t,
                                                  K=self.K)
 
@@ -434,8 +441,9 @@ class VolBrkOut_ohlc_multi(Strategy):
                      does_save=does_save, tikr=tikr)
     self.K = K
 
-  def check_buy_sign(self, high_y, low_y, high_t, open_t, K):
+  def check_buy_sign(self, high_y, low_y, open_y, high_t, open_t, K):
     price_width = high_y - low_y
+    # price_width = high_y - open_y
     target_price = open_t + K*price_width
     # target_price = min(max(open_t + K * price_width, open_t * (1 + 0.25 * 0.01)), open_t * (1 + 3 * 0.01))
     buy_sign = 1 if high_t > target_price else 0
@@ -585,7 +593,7 @@ class VolBrkOut_ohlc_multi(Strategy):
         noise = int(close_y-open_y)/int(high_y-low_y) if int(high_y-low_y)!=0 else 0
 
         if noise < 0. or True:
-          buy_sign  = self.buy_operation(high_y=high_y, low_y=low_y, high_t=high_t, open_t=open_t)
+          buy_sign  = self.buy_operation(high_y=high_y, low_y=low_y, open_y=open_y, high_t=high_t, open_t=open_t)
 
         # BLOCK: If the max volume code did not buy
         if buy_sign != 1 and day_index>=20:
@@ -605,7 +613,7 @@ class VolBrkOut_ohlc_multi(Strategy):
                 noise = int(close_y-open_y)/int(high_y-low_y) if int(high_y-low_y)!=0 else 0
 
                 if noise < 0. or True:
-                  buy_sign = self.buy_operation(high_y=high_y, low_y=low_y, high_t=high_t, open_t=open_t)
+                  buy_sign = self.buy_operation(high_y=high_y, low_y=low_y, open_y=open_y, high_t=high_t, open_t=open_t)
               except:
                 pass
 
@@ -644,10 +652,10 @@ class VolBrkOut_ohlc_multi(Strategy):
     return 0
 
   def buy_operation(self,
-                    high_y, low_y,
+                    high_y, low_y, open_y,
                     high_t, open_t):
 
-    target_price, buy_sign = self.check_buy_sign(high_y=high_y, low_y=low_y,
+    target_price, buy_sign = self.check_buy_sign(high_y=high_y, low_y=low_y, open_y=open_y,
                                                  high_t=high_t, open_t=open_t,
                                                  K=self.K)
 
