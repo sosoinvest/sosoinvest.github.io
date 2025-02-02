@@ -27,4 +27,4 @@ def get_data_from_yfinance(TIKR):
 # for data in etf_list.etf_list.values():
 #   get_data_from_yfinance(data+".KS")
 
-get_data_from_yfinance("143860.KS")
+get_data_from_yfinance("305720.KS")

@@ -442,8 +442,8 @@ class VolBrkOut_ohlc_multi(Strategy):
     self.K = K
 
   def check_buy_sign(self, high_y, low_y, open_y, high_t, open_t, K):
-    price_width = high_y - low_y
-    # price_width = high_y - open_y
+    # price_width = high_y - low_y
+    price_width = high_y - open_y
     target_price = open_t + K*price_width
     # target_price = min(max(open_t + K * price_width, open_t * (1 + 0.25 * 0.01)), open_t * (1 + 3 * 0.01))
     buy_sign = 1 if high_t > target_price else 0
@@ -471,7 +471,8 @@ class VolBrkOut_ohlc_multi(Strategy):
     return_list = []
 
     for ind in range(today_ind-days, today_ind):
-      target_price_list.append(df["Open"][ind] + self.K*(df["High"][ind] - df["Low"][ind]))
+      # target_price_list.append(df["Open"][ind] + self.K*(df["High"][ind] - df["Low"][ind]))
+      target_price_list.append(df["Open"][ind] + self.K * (df["High"][ind] - df["Open"][ind]))
       buy_sign_list.append(target_price_list[-1]<df["High"][ind])
       return_list.append(1+(df["Open"][ind+1]-target_price_list[-1])/target_price_list[-1])
     return_list = np.array(return_list)
@@ -523,7 +524,10 @@ class VolBrkOut_ohlc_multi(Strategy):
       else:
         # Get the trading target
         today = date_list[day_index]
+
+        weekday = datetime(year=int(today[:4]), month=int(today[5:7]), day=int(today[8:])).weekday()
         print(today)
+        print(weekday)
         print(sum(self.account.data["Total"]))
 
         # List up codes to trade
@@ -562,30 +566,36 @@ class VolBrkOut_ohlc_multi(Strategy):
               pass
 
           # Get the prices of the codes to trade
-          tikr_index = money_volume_list.index(max(money_volume_list)) # Biggest money volume median
-          # tikr_index = past_return_list.index(max(past_return_list)) # Biggest past return
+          # tikr_index = money_volume_list.index(max(money_volume_list)) # Biggest money volume median
+          tikr_index = past_return_list.index(max(past_return_list)) # Biggest past return
           tikr_new = tikr_list[tikr_index]
 
           try:
             (open_y, high_y, low_y, close_y,
              open_t, high_t, low_t, close_t) = self.get_price_multi(self.df[tikr_new], today)
           except:
+            continue_ = True
             for tikr_index in range(0, len(tikr_list)):
-              date_list = [value[:10] for value in list(self.df[tikr_list[tikr_index]]["Date"])]
+              date_list2 = [value[:10] for value in list(self.df[tikr_list[tikr_index]]["Date"])]
 
-              if today in date_list:
+              if today in date_list2 and continue_:
                 tikr_new = tikr_list[tikr_index]
                 (open_y, high_y, low_y, close_y,
                  open_t, high_t, low_t, close_t) = self.get_price_multi(self.df[tikr_new], today)
+                continue_ = False
 
         # BLOCK: Sell operation
         if buy_sign:
           if tikr_new == tikr_old:
             buy_sign = self.sell_operation(open_t=open_t)
           else:
+            print(tikr_new)
+            print(tikr_old)
             (open_y, high_y, low_y, close_y,
              open_t, high_t, low_t, close_t) = self.get_price_multi(self.df[tikr_old], today)
             buy_sign = self.sell_operation(open_t=open_t)
+
+          print(f"sell {tikr_old}")
 
         # BLOCK: Buy operation
         (open_y, high_y, low_y, close_y,
@@ -594,13 +604,17 @@ class VolBrkOut_ohlc_multi(Strategy):
 
         if noise < 0. or True:
           buy_sign  = self.buy_operation(high_y=high_y, low_y=low_y, open_y=open_y, high_t=high_t, open_t=open_t)
-
+          if buy_sign:
+            print(f"buy {tikr_new}")
         # BLOCK: If the max volume code did not buy
-        if buy_sign != 1 and day_index>=20:
-          money_volume_list, tikr_index_list = zip(*sorted(zip(money_volume_list, list(range(len(money_volume_list)))), reverse=True)) # Biggest money volume
-          # past_return_list, tikr_index_list = zip(
-          #   *sorted(zip(past_return_list, list(range(len(past_return_list)))), reverse=True)) # Biggest past return
+        if day_index >= 20:
+          # money_volume_list, tikr_index_list = zip(*sorted(zip(money_volume_list, list(range(len(money_volume_list)))), reverse=True)) # Biggest money volume
+          past_return_list, tikr_index_list = zip(
+            *sorted(zip(past_return_list, list(range(len(past_return_list)))), reverse=True))  # Biggest past return
+          for tikr_index2 in tikr_index_list:
+            print(tikr_list[tikr_index2])
 
+        if buy_sign != 1 and day_index>=20:
           count = 0
           for tikr_index2 in tikr_index_list:
             count += 1
@@ -613,7 +627,11 @@ class VolBrkOut_ohlc_multi(Strategy):
                 noise = int(close_y-open_y)/int(high_y-low_y) if int(high_y-low_y)!=0 else 0
 
                 if noise < 0. or True:
+                  pass
                   buy_sign = self.buy_operation(high_y=high_y, low_y=low_y, open_y=open_y, high_t=high_t, open_t=open_t)
+                  # if buy_sign:
+                  #   print(f"buy {tikr_new}")
+
               except:
                 pass
 
@@ -623,7 +641,6 @@ class VolBrkOut_ohlc_multi(Strategy):
                           target_price=0, normal_factor=1,
                           buy_sign=buy_sign, tag=0)
         tikr_old = tikr_new
-        print(tikr_new)
 
     self.noise = noise
     self.account.sell_asset(tikr=self.tikr,

@@ -92,13 +92,13 @@ systrader와 같은 데이터로 테스트 한 것이 아니기 때문에 맞다
 아래의 수익곡선에서도 기존 변동폭의 정의가 더 잘 작동함을 눈으로 확인할 수 있다. 
 
 <p align="center">   
-    <img src="/images/2025-02-02-vol-definition//total_figure_K03.webp.webp" alt="K=0.3 경우의 백테스트 결과">
+    <img src="/images/2025-02-02-vol-definition//total_figure_K03.webp" alt="K=0.3 경우의 백테스트 결과">
     <br>
    <span style="font-style: italic; color: #FFFFFF;">Fig. 1 백테스트 결과 K = 0.3</span>
 </p>
 
 <p align="center">   
-    <img src="/images/2025-02-02-vol-definition//total_figure_K05.webp.webp" alt="K=0.5 경우의 백테스트 결과">
+    <img src="/images/2025-02-02-vol-definition//total_figure_K05.webp" alt="K=0.5 경우의 백테스트 결과">
     <br>
-   <span style="font-style: italic; color: #FFFFFF;">Fig. 1 백테스트 결과 K = 0.5</span>
+   <span style="font-style: italic; color: #FFFFFF;">Fig. 2 백테스트 결과 K = 0.5</span>
 </p>
