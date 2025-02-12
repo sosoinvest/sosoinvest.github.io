@@ -6,9 +6,10 @@ from matplotlib.ticker import MaxNLocator
 plt.rcParams["font.family"] = "Malgun Gothic"
 plt.rcParams["axes.unicode_minus"] = False
 
-K = 0.5
-tikr_list = ["005930", "005380", "012450", "207940", "329180", "373220"]
-TIKR = "005380"
+
+K = 0.7
+# tikr_list = ["005930", "005380", "012450", "207940", "329180", "373220"]
+# TIKR = "005380"
 
 # # BLOCK: Intraday
 # does_save = False
@@ -24,39 +25,44 @@ TIKR = "005380"
 # my_tester.run()
 
 # BLOCK: VBO OHLC
-# does_save = True
-# my_tester = tester100.Backtester(filename=f"{TIKR}.csv", #f"E:/{TIKR}.csv",
-#                                  tikr=TIKR,
+import etfs
+tikr_list = etfs.sector_etf["TIKR"]
+for TIKR in tikr_list:
+
+  does_save = True
+  my_tester = tester100.Backtester(filename=f"{TIKR}.csv", #f"E:/{TIKR}.csv",
+                                   tikr=TIKR,
+                                   does_save=does_save,
+                                   fee=0.0036396*0.01, tax=15.4*0.0, slippage=0.0*0.01, leverage=1,
+                                   losscut=5*0.01,
+                                   deposit_cash=10000,
+                                   strategy="VolBrkOut_ohlc",
+                                   params={"K": K},
+                                   window=1)
+  my_tester.run()
+  print(TIKR)
+input("")
+# # BLOCK: VBO Multi
+# does_save = False
+# # tikr_list = ["117460", "091160", "091180", "266360", "305720", "466920", "244580" ,"449450", "143860", "139260", "228790", "091170"]
+# # tikr_list = ["117460", "091160", "091180", "266360", "305720", "466920", "244580" ,"449450", "143860", "228790"]
+# tikr_list = ["005930", "005380", "012450", "207940", "329180", "373220"]
+# # tikr_list = ["449450"]
+#
+# my_tester = tester100.Backtester(filename=f"",
+#                                  tikr=tikr_list,
 #                                  does_save=does_save,
-#                                  fee=0.0036396*0.01, tax=15.4*0.0, slippage=0.0*0.01, leverage=1,
+#                                  fee=0.0036396*0.01, tax=0.18*0.0, slippage=0.0*0.01, leverage=1,
 #                                  losscut=5*0.01,
 #                                  deposit_cash=10000,
-#                                  strategy="VolBrkOut_ohlc",
+#                                  strategy="VolBrkOut_ohlc_multi",
 #                                  params={"K": K},
 #                                  window=1)
 # my_tester.run()
 
-# BLOCK: VBO Multi
-does_save = False
-# tikr_list = ["117460", "091160", "091180", "266360", "305720", "466920", "244580" ,"449450", "143860", "139260", "228790", "091170"]
-# tikr_list = ["117460", "091160", "091180", "266360", "305720", "466920", "244580" ,"449450", "143860", "228790"]
-tikr_list = ["005930", "005380", "012450", "207940", "329180", "373220"]
-# tikr_list = ["449450"]
-
-my_tester = tester100.Backtester(filename=f"",
-                                 tikr=tikr_list,
-                                 does_save=does_save,
-                                 fee=0.0036396*0.01, tax=0.18*0.0, slippage=0.0*0.01, leverage=1,
-                                 losscut=5*0.01,
-                                 deposit_cash=10000,
-                                 strategy="VolBrkOut_ohlc_multi",
-                                 params={"K": K},
-                                 window=1)
-my_tester.run()
-
 # BLOCK: Plot the result
-# filename = f"Backtest_Result_{TIKR}_Vol_Brk_Out_K={K}.csv"
-filename = f"Backtest_Result_{tikr_list}_Vol_Brk_Out_K={K}.csv"
+filename = f"Backtest_Result_{TIKR}_Vol_Brk_Out_K={K}.csv"
+# filename = f"Backtest_Result_{tikr_list}_Vol_Brk_Out_K={K}.csv"
 # filename = "Backtest_Result_['117460', '091160', '091180', '266360', '305720', '466920', '244580', '449450', '143860', '228790']_Vol_Brk_Out_K=0.5.csv"
 df = pd.read_csv(filename)
 

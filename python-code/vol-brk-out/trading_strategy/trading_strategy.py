@@ -42,7 +42,7 @@ class Strategy:
                    target_price,
                    normal_factor,
                    buy_sign,
-                   tag):
+                   tag, mdd):
     self.logger.log_data("Day", today)
     self.logger.log_data("Cash", self.account.data["Total"][0])
     self.logger.log_data("Portfolio", sum(self.account.data["Total"][1:]))
@@ -54,6 +54,7 @@ class Strategy:
     self.logger.log_data("Buy sign", buy_sign)
     self.logger.log_data("Target price", target_price * normal_factor)
     self.logger.log_data("Tag", tag)
+    self.logger.log_data("MDD", mdd)
 
 # BLOCK: VBO OHLC Single
 class VolBrkOut_ohlc(Strategy):
@@ -73,11 +74,19 @@ class VolBrkOut_ohlc(Strategy):
     self.K = K
 
   def check_buy_sign(self, high_y, low_y, open_y, close_yy, high_t, open_t, K):
+    # High to Low
     # price_width = high_y - low_y
+
+    # Open to Low
     # price_width = open_y - low_y
-    price_width = high_y - open_y
-    # tr = max(max(high_y-low_y, abs(high_y-close_yy)), abs(low_y-close_yy))
-    # price_width = tr
+
+    # High to Open
+    # price_width = high_y - open_y
+
+    # TR
+    tr = max(max(high_y-low_y, abs(high_y-close_yy)), abs(low_y-close_yy))
+    price_width = tr
+
     # target_price = min(max(open_t + K*price_width, open_t*(1 + 0.25*0.01)), open_t*(1 + 3*0.01))
     target_price = open_t + K*price_width
     buy_sign = 1 if high_t > target_price else 0
@@ -90,6 +99,7 @@ class VolBrkOut_ohlc(Strategy):
     buy_sign = 0
 
     day_index += 1
+    max_money = sum(self.account.data["Total"])
     while not is_end_of_data:
       day_index += 1
 
@@ -98,6 +108,10 @@ class VolBrkOut_ohlc(Strategy):
 
       else:
         today = self.df["Date"][day_index][0:10]
+        today_money = sum(self.account.data["Total"])
+        max_money = max(max_money,today_money)
+        mdd = (today_money - max_money)/max_money
+
         print(today)
         print(sum(self.account.data["Total"]))
         (open_yy, high_yy, low_yy, close_yy) = self.get_price(ind=day_index - 2, normal_factor=normal_factor)
@@ -126,7 +140,7 @@ class VolBrkOut_ohlc(Strategy):
         self.logging_data(today=today,
                           open=open_t, close=close_t, high=high_t, low=low_t,
                           target_price=0, normal_factor=normal_factor,
-                          buy_sign=buy_sign, tag=0)
+                          buy_sign=buy_sign, tag=0, mdd=mdd)
 
     self.noise = noise
     self.account.sell_asset(tikr=self.tikr,
