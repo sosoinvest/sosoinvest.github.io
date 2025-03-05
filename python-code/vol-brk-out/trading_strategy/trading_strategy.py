@@ -81,11 +81,11 @@ class VolBrkOut_ohlc(Strategy):
     # price_width = open_y - low_y
 
     # High to Open
-    # price_width = high_y - open_y
+    price_width = high_y - open_y
 
     # TR
-    tr = max(max(high_y-low_y, abs(high_y-close_yy)), abs(low_y-close_yy))
-    price_width = tr
+    # tr = max(max(high_y-low_y, abs(high_y-close_yy)), abs(low_y-close_yy))
+    # price_width = tr
 
     # target_price = min(max(open_t + K*price_width, open_t*(1 + 0.25*0.01)), open_t*(1 + 3*0.01))
     target_price = open_t + K*price_width
@@ -458,6 +458,7 @@ class VolBrkOut_ohlc_multi(Strategy):
   def check_buy_sign(self, high_y, low_y, open_y, high_t, open_t, K):
     # price_width = high_y - low_y
     price_width = high_y - open_y
+    # price_width = max(high_y - open_y, open_y - low_y)
     target_price = open_t + K*price_width
     # target_price = min(max(open_t + K * price_width, open_t * (1 + 0.25 * 0.01)), open_t * (1 + 5 * 0.01))
     buy_sign = 1 if high_t > target_price else 0
@@ -615,7 +616,7 @@ class VolBrkOut_ohlc_multi(Strategy):
          open_t, high_t, low_t, close_t) = self.get_price_multi(self.df[tikr_new], today)
         noise = int(close_y-open_y)/int(high_y-low_y) if int(high_y-low_y)!=0 else 0
 
-        if noise < 0. or True:
+        if noise > 0. or True:
           buy_sign  = self.buy_operation(high_y=high_y, low_y=low_y, open_y=open_y, high_t=high_t, open_t=open_t)
           if buy_sign:
             print(f"buy {tikr_new}")
@@ -650,7 +651,7 @@ class VolBrkOut_ohlc_multi(Strategy):
         self.logging_data(today=today,
                           open=open_t, close=close_t, high=high_t, low=low_t,
                           target_price=0, normal_factor=1,
-                          buy_sign=buy_sign, tag=0)
+                          buy_sign=buy_sign, tag=0, mdd=0)
         tikr_old = tikr_new
 
     self.noise = noise
